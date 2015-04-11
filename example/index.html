@@ -1,0 +1,1386 @@
+<!doctype html>
+<html data-ng-app="gitlabKBApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muse: Mule Sales Enablement API</title>
+    <style>
+        style > body,
+h4,
+h5 {
+    font-family: 'Roboto' sans-serif !important;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+    display: none;
+}
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+    display: inline;
+}
+
+code {
+    color: #444;
+    background-color: #ddd;
+    font-family: 'Inconsolata' monospace !important;
+}
+
+a[data-target] {
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.back-to-top {
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    right: 24px;
+    padding: 4px 8px;
+    background-color: #eee;
+    text-decoration: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel {
+    overflow: hidden;
+}
+
+.panel-heading code {
+    overflow: auto;
+    margin-left: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.panel-heading h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a.list-group-item:hover {
+    background-color: #f8f8f8;
+    border-left: 2px solid #555;
+    padding-left: 15px;
+}
+
+.indent {
+    display: block;
+    text-indent: 16px;
+}
+
+.list-group-item {
+    padding-left: 16px;
+}
+
+.list-group-item .toggle .open {
+    display: block;
+}
+
+.list-group-item .toggle .closed {
+    display: none;
+}
+
+.list-group-item.collapsed .toggle .open {
+    display: none;
+}
+
+.list-group-item.collapsed .toggle .closed {
+    display: block;
+}
+
+a.list-group-item {
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+a.list-group-item.heading {
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+
+a.list-group-item.heading:hover {
+    background-color: #f8f8f8;
+}
+
+.list-group-item.collapse {
+    display: none;
+}
+
+.list-group-item.collapse.in {
+    display: block;
+}
+
+.list-group-item a span.closed {
+    display: none;
+}
+
+.list-group-item a span.open {
+    display: block;
+}
+
+.list-group-item a.collapsed span.closed {
+    display: block;
+}
+
+.list-group-item a.collapsed span.open {
+    display: none;
+}
+
+#nav {
+    width: 100%;
+    margin-top: 38px;
+    max-width: 255px;
+    top: 0;
+    bottom: 0;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    overflow-y: auto;
+}
+
+@media (max-width: 1199px) {
+    #nav {
+        max-width: 212px;
+    }
+}
+    </style>
+    <link type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            
+
+        <nav id="nav" class="hidden-sm hidden-xs affix nav">
+        <div>
+            <a class="list-group-item collapsed" href="#security">Security</a>
+        </div>
+
+                    <div>
+    <a class="list-group-item collapsed" href="#/presentations">Presentations</a>
+</div>
+                    <div>
+    <a class="list-group-item collapsed" href="#/products">Products</a>
+</div>
+            </nav>
+
+        </div>
+        <div class="col-md-4" style="position: initial;">
+            <h2>Muse: Mule Sales Enablement API</h2>
+            <div>
+    <hr/>
+    <h3>Security</h3>
+            <div>
+            <h4>jwt</h4>
+            <div>
+                Authorization with jwt usage header &quot;X-HD-Access-Token&quot; with token
+
+            </div>
+            <div>
+                            </div>
+        </div>
+            <div>
+            <h4>oauth_2_0</h4>
+            <div>
+                Dropbox supports OAuth 2.0 for authenticating all API requests.
+
+            </div>
+            <div>
+                            </div>
+        </div>
+            <div>
+            <h4>oauth_1_0</h4>
+            <div>
+                OAuth 1.0 continues to be supported for all API requests, but OAuth 2.0 is now preferred.
+
+            </div>
+            <div>
+                            </div>
+        </div>
+    </div>
+            <hr/>
+            
+
+
+                
+<div id="/presentations">
+    URl: /presentations
+    
+    <div onclick="show_description('/presentations_desc')">
+        <div  style="float: right;">
+                            <a href="#/presentations_desc_GET"><div class="label label-primary">GET</div></a>
+                            <a href="#/presentations_desc_POST"><div class="label label-success">POST</div></a>
+                    </div>
+        <div style="
+              border-left: 4px solid #0077ee;
+              padding-left: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              font-size: 20px;
+              cursor: pointer;">
+            Presentations
+        </div>
+    </div>
+
+    <hr/>
+</div>
+
+<div id="/presentations_desc" class="desc_resources" style="
+    display: none;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;">
+
+            <div class="panel" id="/presentations_desc_GET">
+            <div class="panel-heading">
+                <div class="label label-primary">GET</div> /presentations
+            </div>
+            <div class="panel-body">
+                This is get method
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A collection of product Presentations&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;size&quot;: 
+		{
+			&quot;type&quot;: &quot;integer&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;presentations&quot;: 
+		{
+			&quot;type&quot;: &quot;array&quot;,
+			&quot;items&quot;: 
+			{
+				&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+				&quot;type&quot;: &quot;object&quot;,
+				&quot;description&quot;: &quot;A single product Presentation&quot;,
+				&quot;properties&quot;: 
+				{
+					&quot;id&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;title&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;description&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;fileUrl&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;productId&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					}
+				},
+				&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+			}
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentations.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/presentations_desc_POST">
+            <div class="panel-heading">
+                <div class="label label-success">POST</div> /presentations
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  201
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+    </div>
+                        
+<div id="/presentations/{presentationId}">
+    URl: /presentations/{presentationId}
+    
+    <div onclick="show_description('/presentations/{presentationId}_desc')">
+        <div  style="float: right;">
+                            <a href="#/presentations/{presentationId}_desc_GET"><div class="label label-primary">GET</div></a>
+                            <a href="#/presentations/{presentationId}_desc_PUT"><div class="label label-warning">PUT</div></a>
+                            <a href="#/presentations/{presentationId}_desc_PATCH"><div class="label label-info">PATCH</div></a>
+                            <a href="#/presentations/{presentationId}_desc_DELETE"><div class="label label-danger">DELETE</div></a>
+                    </div>
+        <div style="
+              border-left: 4px solid #0077ee;
+              padding-left: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              font-size: 20px;
+              cursor: pointer;">
+            One presentation
+        </div>
+    </div>
+
+    <hr/>
+</div>
+
+<div id="/presentations/{presentationId}_desc" class="desc_resources" style="
+    display: none;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;">
+
+            <div class="panel" id="/presentations/{presentationId}_desc_GET">
+            <div class="panel-heading">
+                <div class="label label-primary">GET</div> /presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/presentations/{presentationId}_desc_PUT">
+            <div class="panel-heading">
+                <div class="label label-warning">PUT</div> /presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/presentations/{presentationId}_desc_PATCH">
+            <div class="panel-heading">
+                <div class="label label-info">PATCH</div> /presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/presentations/{presentationId}_desc_DELETE">
+            <div class="panel-heading">
+                <div class="label label-danger">DELETE</div> /presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                            </ul>
+        </div>
+    </div>
+                
+    
+            
+<div id="/products">
+    URl: /products
+    
+    <div onclick="show_description('/products_desc')">
+        <div  style="float: right;">
+                            <a href="#/products_desc_GET"><div class="label label-primary">GET</div></a>
+                            <a href="#/products_desc_POST"><div class="label label-success">POST</div></a>
+                    </div>
+        <div style="
+              border-left: 4px solid #0077ee;
+              padding-left: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              font-size: 20px;
+              cursor: pointer;">
+            Products
+        </div>
+    </div>
+
+    <hr/>
+</div>
+
+<div id="/products_desc" class="desc_resources" style="
+    display: none;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;">
+
+            <div class="panel" id="/products_desc_GET">
+            <div class="panel-heading">
+                <div class="label label-primary">GET</div> /products
+            </div>
+            <div class="panel-body">
+                This is get method
+                <hr/>
+                                    <div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+</div>
+                                            <pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre>
+                                                        <div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use
+with the &quot;access_token&quot; query string parameter.
+</div>
+                                                </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A collection of Products&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;size&quot;: 
+		{
+			&quot;type&quot;: &quot;integer&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;products&quot;: 
+		{
+			&quot;type&quot;: &quot;array&quot;,
+			&quot;items&quot;: 
+			{
+				&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+				&quot;type&quot;: &quot;object&quot;,
+				&quot;description&quot;: &quot;A single Product&quot;,
+				&quot;properties&quot;: 
+				{
+					&quot;id&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;name&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;description&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;imageUrl&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;region&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					}
+				},
+				&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+			}
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/products.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                    <li class="list-group-item">
+                        Response  401
+                        <ul class="list-group">
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                    <li class="list-group-item">
+                        Response  403
+                        <ul class="list-group">
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                
+                
+                            </ul>
+        </div>
+            <div class="panel" id="/products_desc_POST">
+            <div class="panel-heading">
+                <div class="label label-success">POST</div> /products
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  201
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+    </div>
+                        
+<div id="/products/{productId}">
+    URl: /products/{productId}
+    
+    <div onclick="show_description('/products/{productId}_desc')">
+        <div  style="float: right;">
+                            <a href="#/products/{productId}_desc_GET"><div class="label label-primary">GET</div></a>
+                            <a href="#/products/{productId}_desc_PUT"><div class="label label-warning">PUT</div></a>
+                            <a href="#/products/{productId}_desc_PATCH"><div class="label label-info">PATCH</div></a>
+                            <a href="#/products/{productId}_desc_DELETE"><div class="label label-danger">DELETE</div></a>
+                    </div>
+        <div style="
+              border-left: 4px solid #0077ee;
+              padding-left: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              font-size: 20px;
+              cursor: pointer;">
+            One products
+        </div>
+    </div>
+
+    <hr/>
+</div>
+
+<div id="/products/{productId}_desc" class="desc_resources" style="
+    display: none;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;">
+
+            <div class="panel" id="/products/{productId}_desc_GET">
+            <div class="panel-heading">
+                <div class="label label-primary">GET</div> /products/{productId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}_desc_PUT">
+            <div class="panel-heading">
+                <div class="label label-warning">PUT</div> /products/{productId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}_desc_PATCH">
+            <div class="panel-heading">
+                <div class="label label-info">PATCH</div> /products/{productId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}_desc_DELETE">
+            <div class="panel-heading">
+                <div class="label label-danger">DELETE</div> /products/{productId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                            </ul>
+        </div>
+    </div>
+                        
+<div id="/products/{productId}/presentations">
+    URl: /products/{productId}/presentations
+    
+    <div onclick="show_description('/products/{productId}/presentations_desc')">
+        <div  style="float: right;">
+                            <a href="#/products/{productId}/presentations_desc_GET"><div class="label label-primary">GET</div></a>
+                            <a href="#/products/{productId}/presentations_desc_POST"><div class="label label-success">POST</div></a>
+                    </div>
+        <div style="
+              border-left: 4px solid #0077ee;
+              padding-left: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              font-size: 20px;
+              cursor: pointer;">
+            Presentations
+        </div>
+    </div>
+
+    <hr/>
+</div>
+
+<div id="/products/{productId}/presentations_desc" class="desc_resources" style="
+    display: none;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;">
+
+            <div class="panel" id="/products/{productId}/presentations_desc_GET">
+            <div class="panel-heading">
+                <div class="label label-primary">GET</div> /products/{productId}/presentations
+            </div>
+            <div class="panel-body">
+                This is get method
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A collection of product Presentations&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;size&quot;: 
+		{
+			&quot;type&quot;: &quot;integer&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;presentations&quot;: 
+		{
+			&quot;type&quot;: &quot;array&quot;,
+			&quot;items&quot;: 
+			{
+				&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+				&quot;type&quot;: &quot;object&quot;,
+				&quot;description&quot;: &quot;A single product Presentation&quot;,
+				&quot;properties&quot;: 
+				{
+					&quot;id&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;title&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;description&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;fileUrl&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;productId&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					}
+				},
+				&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+			}
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentations.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}/presentations_desc_POST">
+            <div class="panel-heading">
+                <div class="label label-success">POST</div> /products/{productId}/presentations
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  201
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+    </div>
+                        
+<div id="/products/{productId}/presentations/{presentationId}">
+    URl: /products/{productId}/presentations/{presentationId}
+    
+    <div onclick="show_description('/products/{productId}/presentations/{presentationId}_desc')">
+        <div  style="float: right;">
+                            <a href="#/products/{productId}/presentations/{presentationId}_desc_GET"><div class="label label-primary">GET</div></a>
+                            <a href="#/products/{productId}/presentations/{presentationId}_desc_PUT"><div class="label label-warning">PUT</div></a>
+                            <a href="#/products/{productId}/presentations/{presentationId}_desc_PATCH"><div class="label label-info">PATCH</div></a>
+                            <a href="#/products/{productId}/presentations/{presentationId}_desc_DELETE"><div class="label label-danger">DELETE</div></a>
+                    </div>
+        <div style="
+              border-left: 4px solid #0077ee;
+              padding-left: 10px;
+              margin-top: 20px;
+              margin-left: 20px;
+              font-size: 20px;
+              cursor: pointer;">
+            One presentation
+        </div>
+    </div>
+
+    <hr/>
+</div>
+
+<div id="/products/{productId}/presentations/{presentationId}_desc" class="desc_resources" style="
+    display: none;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;">
+
+            <div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_GET">
+            <div class="panel-heading">
+                <div class="label label-primary">GET</div> /products/{productId}/presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_PUT">
+            <div class="panel-heading">
+                <div class="label label-warning">PUT</div> /products/{productId}/presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_PATCH">
+            <div class="panel-heading">
+                <div class="label label-info">PATCH</div> /products/{productId}/presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                    <li class="list-group-item">
+                        Response  200
+                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                    application/json
+                                                                                                                <h4>Schema</h4>
+                                        <pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre>
+                                                                                                        </li>
+                                                    </ul>
+                        <hr/>
+                    </li>
+                                            </ul>
+        </div>
+            <div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_DELETE">
+            <div class="panel-heading">
+                <div class="label label-danger">DELETE</div> /products/{productId}/presentations/{presentationId}
+            </div>
+            <div class="panel-body">
+                
+                <hr/>
+                            </div>
+            <ul class="list-group">
+                                            </ul>
+        </div>
+    </div>
+                
+    
+    
+    
+    
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function show_description(id){
+
+        window.location.hash = id+'_GET';
+
+        var all = document.getElementsByClassName('desc_resources');
+
+        for (var i = 0; i < all.length; i++) {
+            all[i].style['display'] = 'none';
+        }
+
+        var el = document.getElementById(id);
+        if (el.style['display'] == 'none') {
+            el.style['display'] = 'block';
+        } else {
+            el.style['display'] = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

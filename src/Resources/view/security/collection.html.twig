@@ -1,0 +1,19 @@
+<div>
+    <hr/>
+    <h3>Security</h3>
+    {% for scheme in security %}
+        <div>
+            <h4>{{ scheme.key }}</h4>
+            <div>
+                {{ scheme.description }}
+            </div>
+            <div>
+                {% for describedBy in scheme.describedBy %}
+                    {% for response in describedBy.responses  %}
+                        {{ response.statusCode }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

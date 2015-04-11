@@ -1,0 +1,49 @@
+<!doctype html>
+<html data-ng-app="gitlabKBApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <style>
+        {% include 'styles.css' %}
+    </style>
+    <link type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            {% include "menu/nav.html.twig" %}
+        </div>
+        <div class="col-md-4" style="position: initial;">
+            <h2>{{ title }}</h2>
+            {% include "security/collection.html.twig" %}
+            <hr/>
+            {% include "resources/collection.html.twig" %}
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function show_description(id){
+
+        window.location.hash = id+'_GET';
+
+        var all = document.getElementsByClassName('desc_resources');
+
+        for (var i = 0; i < all.length; i++) {
+            all[i].style['display'] = 'none';
+        }
+
+        var el = document.getElementById(id);
+        if (el.style['display'] == 'none') {
+            el.style['display'] = 'block';
+        } else {
+            el.style['display'] = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

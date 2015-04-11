@@ -1,0 +1,20 @@
+{
+  "name": "cnam/raml2html",
+  "description": "Raml to html creator",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Anton Popov",
+      "email": "cnam812@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Cnam\\": "src/"
+    }
+  },
+  "require": {
+    "alecsammon/php-raml-parser": "1.0.0",
+    "twig/twig": "1.18.0"
+  }
+}

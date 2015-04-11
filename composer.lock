@@ -1,0 +1,354 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "72f887e81f84b5b8fc4757797ff996fa",
+    "packages": [
+        {
+            "name": "alecsammon/php-raml-parser",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alecsammon/php-raml-parser.git",
+                "reference": "f083f70992fec2dfe56401de6be555d9b7697671"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alecsammon/php-raml-parser/zipball/f083f70992fec2dfe56401de6be555d9b7697671",
+                "reference": "f083f70992fec2dfe56401de6be555d9b7697671",
+                "shasum": ""
+            },
+            "require": {
+                "justinrainbow/json-schema": "@dev",
+                "oodle/inflect": "0.2.0",
+                "symfony/routing": "~2.5",
+                "symfony/yaml": "~2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Raml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alec Sammon",
+                    "email": "alec.sammon@googlemail.com"
+                }
+            ],
+            "description": "A RAML parser built in php",
+            "homepage": "https://github.com/alecsammon/php-raml-parser",
+            "time": "2015-03-26 06:40:10"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "2465fe486c864e30badaa4d005ebdf89dbc503f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2465fe486c864e30badaa4d005ebdf89dbc503f3",
+                "reference": "2465fe486c864e30badaa4d005ebdf89dbc503f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "json-schema/json-schema-test-suite": "1.1.0",
+                "phpdocumentor/phpdocumentor": "~2",
+                "phpunit/phpunit": "~3.7"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "JsonSchema": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2015-03-27 16:41:39"
+        },
+        {
+            "name": "oodle/inflect",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oodle/inflect.git",
+                "reference": "bbeb2fba9302fb27c9cfbf215b9f4224277a44ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oodle/inflect/zipball/bbeb2fba9302fb27c9cfbf215b9f4224277a44ed",
+                "reference": "bbeb2fba9302fb27c9cfbf215b9f4224277a44ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.17"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Inflect": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Mucklo",
+                    "email": "mmucklo@corp.oodle.com"
+                },
+                {
+                    "name": "Sho Kuwamoto",
+                    "email": "sho@kuwamoto.org"
+                }
+            ],
+            "description": "inflect - a memoizing inflector for php",
+            "keywords": [
+                "inflect",
+                "inflector",
+                "pluralize",
+                "singularize",
+                "urlify"
+            ],
+            "time": "2013-11-30 06:16:23"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "v2.6.6",
+            "target-dir": "Symfony/Component/Routing",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Routing.git",
+                "reference": "4e173a645b63ff60a124f3741b4f15feebd908fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/4e173a645b63ff60a124f3741b4f15feebd908fa",
+                "reference": "4e173a645b63ff60a124f3741b4f15feebd908fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "doctrine/common": "~2.2",
+                "psr/log": "~1.0",
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.4",
+                "symfony/http-foundation": "~2.3",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/yaml": "~2.0,>=2.0.5"
+            },
+            "suggest": {
+                "doctrine/annotations": "For using the annotation loader",
+                "symfony/config": "For using the all-in-one router or any loader",
+                "symfony/expression-language": "For using expression matching",
+                "symfony/yaml": "For using the YAML loader"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Routing\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Routing Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "router",
+                "routing",
+                "uri",
+                "url"
+            ],
+            "time": "2015-03-30 15:54:10"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.6.6",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "174f009ed36379a801109955fc5a71a49fe62dd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/174f009ed36379a801109955fc5a71a49fe62dd4",
+                "reference": "174f009ed36379a801109955fc5a71a49fe62dd4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-03-30 15:54:10"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-01-25 17:32:08"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}

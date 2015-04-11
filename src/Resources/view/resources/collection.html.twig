@@ -1,0 +1,12 @@
+{% macro list_resources(resources) %}
+    {% import _self as macros %}
+    {% for resource in resources %}
+        {% include "resources/item.html.twig" %}
+        {{ macros.list_resources(resource.resources) }}
+    {% endfor %}
+{% endmacro %}
+
+
+{% import _self as macros %}
+
+{{ macros.list_resources(resources) }}

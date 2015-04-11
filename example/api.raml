@@ -1,0 +1,133 @@
+#%RAML 0.8
+---
+title: "Muse: Mule Sales Enablement API"
+version: v1
+schemas:
+    - presentation: !include schema/presentation.json
+      presentations: !include schema/presentations.json
+      product: !include schema/product.json
+      products: !include schema/products.json
+securitySchemes: !include auth/security.yml
+resourceTypes:
+  - base:
+      get?:
+        responses: &standardResponses
+          200:
+            description: OK
+      put?:
+        responses: *standardResponses
+      patch?:
+        responses: *standardResponses
+      post?:
+          responses:
+            201:
+              description: Created
+      delete?:
+        responses: *standardResponses
+  - collection:
+      type: base
+      get:
+        is: [ paged ]
+      post:
+  - typedCollection:
+      type: collection
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                schema: <<collectionSchema>>
+      post:
+        body:
+          application/json:
+            schema: <<itemSchema>>
+        responses:
+          201:
+            body:
+              application/json:
+                schema: <<itemSchema>>
+  - member:
+      type: base
+      get:
+      put:
+      patch:
+      delete:
+  - typedMember:
+      type: member
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                schema: <<itemSchema>>
+      put:
+        body:
+          application/json:
+            schema: <<itemSchema>>
+        responses:
+          200:
+            body:
+              application/json:
+                schema: <<itemSchema>>
+      patch:
+        body:
+          application/json:
+            schema: <<itemSchema>>
+        responses:
+          200:
+            body:
+              application/json:
+                schema: <<itemSchema>>
+      delete:
+traits:
+  - paged:
+      queryParameters:
+        start:
+          displayName: start
+          description: The first page to return
+          type: integer
+        pages:
+          displayName: pages
+          description: The number of pages to return
+          type: integer
+  - secured:
+      headers:
+        Authorization:
+          description: The auth token for this request
+      responses:
+        401:
+          description: Unauthorized
+/presentations: &presentations
+  displayName: Presentations
+  type: { typedCollection: { itemSchema: presentation, collectionSchema: presentations } }
+  is: [ secured ]
+  securedBy: [jwt, oauth_2_0]
+  get:
+    description: This is get method
+    queryParameters:
+      title:
+        type: string
+        displayName: title
+        description: Filter by title
+  /{presentationId}:
+    displayName: One presentation
+    type: { typedMember: { itemSchema: presentation } }
+    is: [ secured ]
+/products:
+  displayName: Products
+  type: { typedCollection: { itemSchema: product, collectionSchema: products } }
+  is: [ secured ]
+  securedBy: [jwt, oauth_2_0]
+  get:
+    securedBy: [jwt, oauth_2_0]
+    description: This is get method
+    queryParameters:
+      region:
+        type: string
+        displayName: region
+        description: Filter by region
+  /{productId}:
+    displayName: One products
+    type: { typedMember: { itemSchema: product } }
+    is: [ secured ]
+    /presentations: *presentations
