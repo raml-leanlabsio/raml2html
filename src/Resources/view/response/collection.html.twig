@@ -1,0 +1,42 @@
+{% set statusesColor = {
+"200": "success",
+"301": "info",
+"401": "success",
+"201": "success",
+"401": "danger",
+"403": "danger",
+"400": "warning",
+"404": "warning",
+"500": "critical",
+"501": "critical",
+"502": "critical",
+"503": "critical",
+} %}
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <h4>Response</h4>
+    </li>
+    {% for response in responses %}
+        <li class="list-group-item">
+            <h5>Http Status code <div class="label label-{{ statusesColor[response.statusCode] }}" style="font-size: 16px;">{{ response.statusCode }}</div></h5>
+            <div>{{ response.description }}</div>
+        </li>
+        {% for response_type in response.types %}
+            <li class="list-group-item">
+                <strong>Content-Type:</strong> {{ response_type }}
+            </li>
+            <li class="list-group-item">
+                {% set body = response.getBodyByType(response_type) %}
+                {% if body.schema %}
+                    <h6>Schema</h6>
+                    <pre><code>{{ body.schema|readable_json }}</code></pre>
+                {% endif %}
+                {% if body.example %}
+                    <h6>Example</h6>
+                    <pre><code>{{ file_loader(body.example) }}</code></pre>
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% endfor %}
+</ul>

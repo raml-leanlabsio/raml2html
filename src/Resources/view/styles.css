@@ -145,7 +145,7 @@ a.list-group-item.heading:hover {
 #nav {
     width: 100%;
     margin-top: 38px;
-    max-width: 255px;
+    max-width: 200px;
     top: 0;
     bottom: 0;
     padding-right: 12px;
@@ -157,4 +157,23 @@ a.list-group-item.heading:hover {
     #nav {
         max-width: 212px;
     }
+}
+
+h4{
+    border-left: 4px solid #0077ee;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+h4:hover{
+    background-color: #f5f5f5;
+}
+
+ul{
+    padding-left: 16px;
+}
+
+
+.active_tab h4{
+    background-color: #b9b9b9;
 }

@@ -1,0 +1,40 @@
+{
+  "name": "alecsammon/php-raml-parser",
+  "type": "library",
+  "description": "A RAML parser built in php",
+  "homepage": "https://github.com/alecsammon/php-raml-parser",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Alec Sammon",
+      "email": "alec.sammon@googlemail.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "Raml\\": "src/"
+    }
+  },
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/alecsammon/json-schema.git"
+    }
+  ],
+
+  "require-dev": {
+    "satooshi/php-coveralls": "~0.6",
+    "phpunit/phpunit": "4.*",
+    "squizlabs/php_codesniffer": "@dev"
+  },
+
+  "require": {
+    "justinrainbow/json-schema": "@dev",
+    "symfony/yaml": "~2.5",
+    "symfony/routing": "~2.5",
+    "oodle/inflect": "0.2.0"
+  }
+}

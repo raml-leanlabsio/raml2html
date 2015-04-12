@@ -85,15 +85,22 @@ class Generator
                 /*foreach($method->getSecuritySchemes() as  $security){
                     $security[$security->getType()] = $security;
                 }*/
+                $security = $method->getSecuritySchemes();
             }
         }
 
+        foreach ($this->specification->getSecuritySchemes() as $scheme) {
+            if ($scheme) {
+                $scheme->getSettings();
+            }
+        }
 
         $html = $this->twig->render('index.html.twig', array(
             'title'     => $this->specification->getTitle(),
             'base_url'  => $this->specification->getBaseUrl(),
             'security'  => $this->specification->getSecuritySchemes(),
             'resources' => $this->specification->getResources(),
+            'documentation' => $this->specification->getDocumentationList(),
         ));
 
         file_put_contents($output, $html);

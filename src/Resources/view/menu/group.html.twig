@@ -1,3 +1,3 @@
 <div>
-    <a class="list-group-item collapsed" href="#{{ resource.uri }}">{{ resource.getDisplayName() }}</a>
+    <a class="list-group-item collapsed" href="#{{ resource.uri }}">{{ resource.getDisplayName()|generate_name }}</a>
 </div>

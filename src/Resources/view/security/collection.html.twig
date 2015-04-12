@@ -1,18 +1,77 @@
-<div>
+<div id="security">
     <hr/>
     <h3>Security</h3>
-    {% for scheme in security %}
-        <div>
-            <h4>{{ scheme.key }}</h4>
+    <br/>
+    {% for key, scheme in security %}
+        <div id="{{ scheme.key }}">
+            <h4 onclick="show_description('{{ scheme.key }}')" style="cursor: pointer">{{ scheme.key }}</h4>
             <div>
                 {{ scheme.description }}
             </div>
-            <div>
-                {% for describedBy in scheme.describedBy %}
-                    {% for response in describedBy.responses  %}
-                        {{ response.statusCode }}
-                    {% endfor %}
-                {% endfor %}
+        </div>
+
+        <div id="{{ scheme.key }}_desc" class="desc_resources" style="
+            display: none;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            right: 0; top: 0;
+            overflow: auto;
+            background-color: #ccc;
+            padding: 10px;">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h2>{{ scheme.key }}</h2>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        {% set describedBy = scheme.getDescribedBy() %}
+
+                        {% set headers = describedBy.headers %}
+                        {% set queryParameters = describedBy.queryParameters %}
+                        {% include "request/collection.html.twig" %}
+
+                    </div>
+                </div>
+                {% set responses =  describedBy.responses %}
+                {% include "response/collection.html.twig" %}
+
+                {% set settings = scheme.settings %}
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4>Settings</h4>
+                    </li>
+                    {% if settings.authorizationUri %}
+                    <li class="list-group-item">
+                        <strong>Authorization Uri</strong>: {{ settings.authorizationUri }}
+                    </li>
+                    {% endif %}
+                    {% if settings.accessTokenUri %}
+                    <li class="list-group-item">
+                        <strong>Access Token Uri</strong>: {{ settings.accessTokenUri }}
+                    </li>
+                    {% endif %}
+                    {% if settings.authorizationGrants %}
+                    <li class="list-group-item">
+                        <strong>Authorization Grants</strong><br/><br/>
+                        <ul>
+                        {% for name, grant in settings.authorizationGrants %}
+                            <li>{{ grant }}</li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% if settings.scopes %}
+                    <li class="list-group-item">
+                        <strong>Scopes</strong><br/><br/>
+                        <ul>
+                        {% for name, scope in settings.scopes %}
+                             <li>{{ scope }}</li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
     {% endfor %}

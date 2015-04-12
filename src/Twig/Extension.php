@@ -21,7 +21,15 @@ class Extension extends  Twig_Extension
     public function getFilters()
     {
         return [
-            'readable_json' => new Twig_SimpleFilter('readable_json', array($this, 'readable_json'))
+            'readable_json' => new Twig_SimpleFilter('readable_json', array($this, 'readable_json')),
+            'generate_name' => new Twig_SimpleFilter('generate_name', array($this, 'generate_name'))
+        ];
+    }
+
+    public function getFunctions()
+    {
+        return [
+            'file_loader' => new \Twig_SimpleFunction('file_loader', array($this, 'file_loader'))
         ];
     }
 
@@ -77,5 +85,19 @@ class Extension extends  Twig_Extension
         $out .= "\n" . str_repeat("\t", $indent) . "}";
 
         return $out;
+    }
+
+    public function file_loader($name)
+    {
+        if (file_exists($name)) {
+            return file_get_contents($name);
+        }
+
+        return $name;
+    }
+
+    public function generate_name($name)
+    {
+        return preg_replace('/\//', ' ', $name);
     }
 }

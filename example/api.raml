@@ -1,6 +1,15 @@
 #%RAML 0.8
 ---
 title: "Muse: Mule Sales Enablement API"
+documentation:
+   title: Home
+   content: |
+         Welcome to the _Zencoder API_ Documentation. The _Zencoder API_
+         allows you to connect your application to our encoding service
+         and encode videos without going through the web  interface. You
+         may also benefit from one of our
+         [integration libraries](https://app.zencoder.com/docs/faq/basics/libraries)
+         for different languages.
 version: v1
 schemas:
     - presentation: !include schema/presentation.json
@@ -8,6 +17,8 @@ schemas:
       product: !include schema/product.json
       products: !include schema/products.json
 securitySchemes: !include auth/security.yml
+mediaType: application/json
+baseUri: http://example.api.com/{version}
 resourceTypes:
   - base:
       get?:
@@ -35,16 +46,13 @@ resourceTypes:
         responses:
           200:
             body:
-              application/json:
                 schema: <<collectionSchema>>
       post:
         body:
-          application/json:
             schema: <<itemSchema>>
         responses:
           201:
             body:
-              application/json:
                 schema: <<itemSchema>>
   - member:
       type: base
@@ -60,6 +68,7 @@ resourceTypes:
             body:
               application/json:
                 schema: <<itemSchema>>
+                example: example/example/product.json
       put:
         body:
           application/json:
@@ -100,7 +109,6 @@ traits:
 /presentations: &presentations
   displayName: Presentations
   type: { typedCollection: { itemSchema: presentation, collectionSchema: presentations } }
-  is: [ secured ]
   securedBy: [jwt, oauth_2_0]
   get:
     description: This is get method
@@ -112,14 +120,12 @@ traits:
   /{presentationId}:
     displayName: One presentation
     type: { typedMember: { itemSchema: presentation } }
-    is: [ secured ]
+    securedBy: [jwt]
 /products:
   displayName: Products
   type: { typedCollection: { itemSchema: product, collectionSchema: products } }
-  is: [ secured ]
-  securedBy: [jwt, oauth_2_0]
   get:
-    securedBy: [jwt, oauth_2_0]
+    securedBy: [jwt, oauth_1_0]
     description: This is get method
     queryParameters:
       region:
@@ -129,5 +135,10 @@ traits:
   /{productId}:
     displayName: One products
     type: { typedMember: { itemSchema: product } }
-    is: [ secured ]
+    get:
+        securedBy: [jwt]
+    put:
+        securedBy: [jwt]
+    patch:
+        securedBy: [jwt]
     /presentations: *presentations

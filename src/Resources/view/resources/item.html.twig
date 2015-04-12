@@ -1,37 +1,35 @@
 {% set methodsStyles = {
-    "GET": "primary",
-    "PATCH": "info",
-    "POST": "success",
-    "PUT": "warning",
-    "DELETE": "danger"
-}
-%}
+"GET": "primary",
+"PATCH": "info",
+"POST": "success",
+"PUT": "warning",
+"DELETE": "danger"
+} %}
 
 <div id="{{ resource.uri }}">
     URl: {{ resource.uri }}
     {{ resource.description }}
-    <div onclick="show_description('{{ resource.uri }}_desc')">
-        <div  style="float: right;">
-            {% for method in resource.methods  %}
-                <a href="#{{ resource.uri }}_desc_{{ method.type }}"><div class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}</div></a>
+    <div onclick="show_description('{{ resource.uri }}')">
+        <div style="float: right;">
+            {% for method in resource.methods %}
+                <a href="#{{ resource.uri }}_desc_{{ method.type }}">
+                    <div class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}
+                        {% if method.getSecuritySchemes()|length > 0 %}
+                            <i class="glyphicon glyphicon-lock"></i>
+                        {% endif %}
+                    </div>
+                </a>
             {% endfor %}
         </div>
-        <div style="
-              border-left: 4px solid #0077ee;
-              padding-left: 10px;
-              margin-top: 20px;
-              margin-left: 20px;
-              font-size: 20px;
-              cursor: pointer;">
-            {{ resource.getDisplayName() }}
-        </div>
+        <h4 style="cursor: pointer;">
+            {{ resource.getDisplayName()|generate_name }}
+        </h4>
     </div>
-
     <hr/>
 </div>
 
 <div id="{{ resource.uri }}_desc" class="desc_resources" style="
-    display: none;
+    display: block;
     position: fixed;
     width: 50%;
     height: 100%;
@@ -39,51 +37,30 @@
     overflow: auto;
     background-color: #ccc;
     padding: 10px;">
-
-    {% for method in resource.methods  %}
+    {% for method in resource.methods %}
         <div class="panel" id="{{ resource.uri }}_desc_{{ method.type }}">
             <div class="panel-heading">
                 <div class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}</div> {{ resource.uri }}
             </div>
+
             <div class="panel-body">
                 {{ method.description }}
-                <hr/>
-                {% for header_name, header_value in method.headers %}
-                    <div><span style="font-weight: bold;">{{ header_name }}</span>: {{ header_value.description }}</div>
-                    {% if header_value.example %}
-                        <pre><code>{{ header_value.example }}</code></pre>
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <ul class="list-group">
-                {% for response in method.responses %}
-                    <li class="list-group-item">
-                        Response  {{ response.statusCode }}
-                        <ul class="list-group">
-                            {% for response_type in response.types %}
-                                <li class="list-group-item">
-                                    {{ response_type }}
-                                    {% set body = response.getBodyByType(response_type) %}
-                                    {% if body.schema %}
-                                        <h4>Schema</h4>
-                                        <pre><code>{{ body.schema|readable_json }}</code></pre>
-                                    {% endif %}
-                                    {% if body.example %}
-                                        <h4>Example</h4>
-                                        <code>
-                                            {{ body.example }}
-                                        </code>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                        <hr/>
-                    </li>
-                {% endfor %}
-                {% for security in method.securitySchemes %}
 
-                {% endfor %}
-            </ul>
+                {% if method.getSecuritySchemes()|length > 0 %}
+                    <br/><br/>
+                    {% for key, scheme in method.getSecuritySchemes() %}
+                        <div class="alert alert-warning" onclick="show_description('{{ scheme.key }}')"  style="cursor: pointer">
+                            <i class="glyphicon glyphicon-lock"></i> Secured by {{ scheme.key }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                {% set headers = method.headers %}
+                {% set queryParameters = method.queryParameters %}
+                {% include "request/collection.html.twig" %}
+            </div>
+            {% set responses = method.responses %}
+            {% include "response/collection.html.twig" %}
         </div>
     {% endfor %}
 </div>

@@ -1,0 +1,30 @@
+<h4 style="margin-bottom: 25px;">Request</h4>
+{% if queryParameters %}
+    <h5>Query parameters</h5>
+    <ul>
+    {% for queryParameterName, queryParameter in queryParameters %}
+        <li>
+        <div><span style="font-weight: bold;">{{ queryParameterName }}</span>: {{ queryParameter.description }}</div>
+        {% if queryParameter.example %}
+            <pre><code>{{ queryParameter.example }}</code></pre>
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% if headers %}
+    <hr/>
+    <h5>Headers</h5>
+    <ul>
+        {% for header_name, header_value in headers %}
+            <li>
+                <div>
+                    <span style="font-weight: bold;">{{ header_name }}</span>: {{ header_value.description }}
+                </div>
+                {% if header_value.example %}
+                    <pre><code>{{ header_value.example }}</code></pre>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
