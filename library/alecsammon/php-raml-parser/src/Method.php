@@ -154,7 +154,7 @@ class Method implements ArrayInstantiationInterface
                 );
             }
         }
-
+        
         if (isset($data['headers'])) {
             foreach ($data['headers'] as $key => $header) {
                 $method->addHeader(NamedParameter::createFromArray($key, $header));

@@ -1,11 +1,25 @@
 <h4 style="margin-bottom: 25px;">Request</h4>
 
+{% if uriParameters %}
+    <h5>Uri Parameters</h5>
+    <ul>
+        {% for uriParameterName, uriParameter in uriParameters %}
+            <li>
+                <div><span style="font-weight: bold;">{{ uriParameterName }}</span> ({{ uriParameter.type }})<br/> {{ uriParameter.description }}</div>
+                {% if uriParameter.example %}
+                    <pre><code>{{ uriParameter.example }}</code></pre>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 {% if baseUriParameters %}
     <h5>Base Uri Parameters</h5>
     <ul>
         {% for baseUriParameterName, baseUriParameter in baseUriParameters %}
             <li>
-                <div><span style="font-weight: bold;">{{ baseUriParameterName }}</span>: {{ baseUriParameter.description }}</div>
+                <div><span style="font-weight: bold;">{{ baseUriParameterName }}</span> ({{ baseUriParameter.type }})<br/> {{ baseUriParameter.description }}</div>
                 {% if baseUriParameter.example %}
                     <pre><code>{{ baseUriParameter.example }}</code></pre>
                 {% endif %}
@@ -19,7 +33,7 @@
     <ul>
     {% for queryParameterName, queryParameter in queryParameters %}
         <li>
-        <div><span style="font-weight: bold;">{{ queryParameterName }}</span>: {{ queryParameter.description }}</div>
+        <div><span style="font-weight: bold;">{{ queryParameterName }}</span> ({{ queryParameter.type }})<br/> {{ queryParameter.description }}</div>
         {% if queryParameter.example %}
             <pre><code>{{ queryParameter.example }}</code></pre>
         {% endif %}

@@ -44,6 +44,7 @@
             </div>
 
             <div class="panel-body">
+                <strong>Description</strong><br/><br/>
                 {{ method.description }}
 
                 {% if method.getSecuritySchemes()|length > 0 %}
@@ -61,6 +62,8 @@
 
                 {% set headers = method.headers %}
                 {% set queryParameters = method.queryParameters %}
+                {% set uriParameters = resource.uriParameters %}
+                {% set baseUriParameters = method.baseUriParameters %}
                 {% include "request/collection.html.twig" %}
             </div>
             {% set responses = method.responses %}
