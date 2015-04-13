@@ -6,7 +6,7 @@ namespace Raml;
  *
  * @see http://raml.org/spec.html#resources-and-nested-resources
  */
-class Resource implements ArrayInstantiationInterface
+class Resource
 {
     /**
      * The URI of this resource (required)
@@ -100,19 +100,21 @@ class Resource implements ArrayInstantiationInterface
     /**
      * Create a Resource from an array
      *
-     * @param string        $uri
-     * @param ApiDefinition $apiDefinition
-     * @param array         $data
-     * [
+     * @param string            $uri
+     * @param array             $data
+     *  [
      *  uri:               string
      *  displayName:       ?string
      *  description:       ?string
      *  baseUriParameters: ?array
-     * ]
+     *  ]
      *
-     * @return self
+     * @param ApiDefinition     $apiDefinition
+     * @param Resource          $parentResource
+     *
+     * @return Resource
      */
-    public static function createFromArray($uri, array $data = [], ApiDefinition $apiDefinition = null)
+    public static function createFromArray($uri, array $data = [], ApiDefinition $apiDefinition = null, Resource $parentResource = null)
     {
         $resource = new static($uri, $apiDefinition);
 
@@ -139,6 +141,13 @@ class Resource implements ArrayInstantiationInterface
                 $resource->addUriParameter(
                     NamedParameter::createFromArray($key, $uriParameter ?: [])
                 );
+            }
+
+        }
+
+        if (null !== $parentResource) {
+            foreach ($parentResource->getUriParameters() as $uriParameter) {
+                $resource->addUriParameter($uriParameter);
             }
         }
 
@@ -167,7 +176,8 @@ class Resource implements ArrayInstantiationInterface
                     Resource::createFromArray(
                         $uri.$key,
                         $value ?: [],
-                        $apiDefinition
+                        $apiDefinition,
+                        $resource
                     )
                 );
             } elseif (in_array(strtoupper($key), Method::$validMethods)) {
