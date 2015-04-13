@@ -34,7 +34,7 @@
                 {% endif %}
                 {% if body.example %}
                     <h6>Example</h6>
-                    <div><textarea class="code">{{ file_loader(body.example)|trim }}</textarea></div>
+                    <div><textarea class="code">{{ file_loader(base_dir_raml, body.example) }}</textarea></div>
                 {% endif %}
             </li>
         {% endfor %}

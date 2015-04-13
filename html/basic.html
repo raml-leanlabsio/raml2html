@@ -562,7 +562,13 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
         }
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/presentation.json&quot;
-}</textarea></div><h6>Example</h6><div><textarea class="code">example/example/product.json</textarea></div></li></ul></div><div class="panel" id="/presentations/{presentationId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /presentations/{presentationId}
+}</textarea></div><h6>Example</h6><div><textarea class="code">{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;first product&quot;,
+  &quot;description&quot;: &quot;Contrary to popular belief&quot;,
+  &quot;price&quot;: 100.00
+}
+</textarea></div></li></ul></div><div class="panel" id="/presentations/{presentationId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /presentations/{presentationId}
             </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -794,7 +800,13 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
         }
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/product.json&quot;
-}</textarea></div><h6>Example</h6><div><textarea class="code">example/example/product.json</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="/products/{productId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}
+}</textarea></div><h6>Example</h6><div><textarea class="code">{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;first product&quot;,
+  &quot;description&quot;: &quot;Contrary to popular belief&quot;,
+  &quot;price&quot;: 100.00
+}
+</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="/products/{productId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}
             </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('jwt')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
                         </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
@@ -1024,7 +1036,13 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
         }
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/presentation.json&quot;
-}</textarea></div><h6>Example</h6><div><textarea class="code">example/example/product.json</textarea></div></li></ul></div><div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}/presentations/{presentationId}
+}</textarea></div><h6>Example</h6><div><textarea class="code">{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;first product&quot;,
+  &quot;description&quot;: &quot;Contrary to popular belief&quot;,
+  &quot;price&quot;: 100.00
+}
+</textarea></div></li></ul></div><div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}/presentations/{presentationId}
             </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,

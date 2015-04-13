@@ -87,10 +87,10 @@ class Extension extends  Twig_Extension
         return $out;
     }
 
-    public function file_loader($name)
+    public function file_loader($basedir, $name)
     {
-        if (file_exists($name)) {
-            return file_get_contents($name);
+        if (file_exists($basedir.$name)) {
+            return file_get_contents($basedir.$name);
         }
 
         return $name;

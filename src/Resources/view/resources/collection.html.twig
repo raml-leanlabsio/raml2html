@@ -1,12 +1,12 @@
-{% macro list_resources(resources) %}
+{% macro list_resources(resources, base_dir_raml) %}
     {% import _self as macros %}
     {% for resource in resources %}
         {% include "resources/item.html.twig" %}
-        {{ macros.list_resources(resource.resources) }}
+        {{ macros.list_resources(resource.resources, base_dir_raml) }}
     {% endfor %}
 {% endmacro %}
 
 
 {% import _self as macros %}
 <h3>Resources</h3>
-{{ macros.list_resources(resources) }}
+{{ macros.list_resources(resources, base_dir_raml) }}

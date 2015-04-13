@@ -25,6 +25,11 @@ class Generator
      */
     private $parser;
 
+    /**
+     * @var string
+     */
+    private $base_dir_raml;
+
     public function __construct()
     {
         $this->parser = new Parser(null, [
@@ -46,6 +51,7 @@ class Generator
      */
     public function parse($input)
     {
+        $this->base_dir_raml = str_replace(basename($input), '', $input);
         $this->specification = $this->parser->parse($input, true);
     }
 
@@ -60,6 +66,7 @@ class Generator
             'security'  => $this->specification->getSecuritySchemes(),
             'resources' => $this->specification->getResources(),
             'documentation' => $this->specification->getDocumentationList(),
+            'base_dir_raml' => $this->base_dir_raml,
         ));
 
         file_put_contents($output, $html);
