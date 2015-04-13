@@ -1,0 +1,986 @@
+<!doctype html>
+<html data-ng-app="gitlabKBApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muse: Mule Sales Enablement API</title>
+    <style>
+        style > body,
+h4,
+h5 {
+    font-family: 'Roboto' sans-serif !important;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+    display: none;
+}
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+    display: inline;
+}
+
+code {
+    color: #444;
+    background-color: #ddd;
+    font-family: 'Inconsolata' monospace !important;
+}
+
+a[data-target] {
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.back-to-top {
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    right: 24px;
+    padding: 4px 8px;
+    background-color: #eee;
+    text-decoration: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel {
+    overflow: hidden;
+}
+
+.panel-heading code {
+    overflow: auto;
+    margin-left: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.panel-heading h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a.list-group-item:hover {
+    background-color: #f8f8f8;
+    border-left: 2px solid #555;
+    padding-left: 15px;
+}
+
+.indent {
+    display: block;
+    text-indent: 16px;
+}
+
+.list-group-item {
+    padding-left: 16px;
+}
+
+.list-group-item .toggle .open {
+    display: block;
+}
+
+.list-group-item .toggle .closed {
+    display: none;
+}
+
+.list-group-item.collapsed .toggle .open {
+    display: none;
+}
+
+.list-group-item.collapsed .toggle .closed {
+    display: block;
+}
+
+a.list-group-item {
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+a.list-group-item.heading {
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+
+a.list-group-item.heading:hover {
+    background-color: #f8f8f8;
+}
+
+.list-group-item.collapse {
+    display: none;
+}
+
+.list-group-item.collapse.in {
+    display: block;
+}
+
+.list-group-item a span.closed {
+    display: none;
+}
+
+.list-group-item a span.open {
+    display: block;
+}
+
+.list-group-item a.collapsed span.closed {
+    display: block;
+}
+
+.list-group-item a.collapsed span.open {
+    display: none;
+}
+
+#nav {
+    width: 100%;
+    margin-top: 38px;
+    max-width: 200px;
+    top: 0;
+    bottom: 0;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    overflow-y: auto;
+}
+
+@media (max-width: 1199px) {
+    #nav {
+        max-width: 212px;
+    }
+}
+
+h4{
+    border-left: 4px solid #0077ee;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+h4:hover{
+    background-color: #f5f5f5;
+}
+
+ul{
+    padding-left: 16px;
+}
+
+
+.active_tab h4{
+    background-color: #b9b9b9;
+}
+    </style>
+    <link type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container-fluid"><div class="row"><div class="col-md-2"><nav id="nav" class="hidden-sm hidden-xs affix nav"><div><a class="list-group-item collapsed" href="#security">Security</a></div><div><a class="list-group-item collapsed" href="#/presentations">Presentations</a></div><div><a class="list-group-item collapsed" href="#/products">Products</a></div></nav></div><div class="col-md-4" style="position: initial;"><h2>Muse: Mule Sales Enablement API</h2><h3>Home</h3><p><strong>Base url</strong> http://example.api.com/v1</p><p>Welcome to the _Zencoder API_ Documentation. The _Zencoder API_
+allows you to connect your application to our encoding service
+and encode videos without going through the web  interface. You
+may also benefit from one of our
+[integration libraries](https://app.zencoder.com/docs/faq/basics/libraries)
+for different languages.</p><div id="security"><hr/><h3>Security</h3><br/><div id="jwt"><h4 onclick="show_description('jwt')" style="cursor: pointer">jwt</h4><div>
+                Authorization with jwt usage header &quot;X-HD-Access-Token&quot; with token
+
+            </div></div><div id="jwt_desc" class="desc_resources" style="
+            display: none;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            right: 0; top: 0;
+            overflow: auto;
+            background-color: #ccc;
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>jwt</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li></ul></div></div><div id="oauth_2_0"><h4 onclick="show_description('oauth_2_0')" style="cursor: pointer">oauth_2_0</h4><div>
+                Dropbox supports OAuth 2.0 for authenticating all API requests.
+
+            </div></div><div id="oauth_2_0_desc" class="desc_resources" style="
+            display: none;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            right: 0; top: 0;
+            overflow: auto;
+            background-color: #ccc;
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_2_0</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use
+with the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
+revoked or expired an access token. To fix, you should re-
+authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
+timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li><li class="list-group-item"><strong>Authorization Uri</strong>: https://www.dropbox.com/1/oauth2/authorize
+                    </li><li class="list-group-item"><strong>Access Token Uri</strong>: https://api.dropbox.com/1/oauth2/token
+                    </li><li class="list-group-item"><strong>Authorization Grants</strong><br/><br/><ul><li>code</li><li>token</li></ul></li></ul></div></div><div id="oauth_1_0"><h4 onclick="show_description('oauth_1_0')" style="cursor: pointer">oauth_1_0</h4><div>
+                OAuth 1.0 continues to be supported for all API requests, but OAuth 2.0 is now preferred.
+
+            </div></div><div id="oauth_1_0_desc" class="desc_resources" style="
+            display: none;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            right: 0; top: 0;
+            overflow: auto;
+            background-color: #ccc;
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_1_0</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
+revoked or expired an access token. To fix, you should re-
+authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
+timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li><li class="list-group-item"><strong>Authorization Uri</strong>: https://www.dropbox.com/1/oauth/authorize
+                    </li></ul></div></div></div><hr/><h3>Resources</h3><div id="/presentations">
+    URl: /presentations
+    
+    <div onclick="show_description('/presentations')"><div style="float: right;"><a href="#/presentations_desc_GET"><div class="label label-primary">GET
+                                            </div></a><a href="#/presentations_desc_POST"><div class="label label-success">POST
+                                            </div></a></div><h4 style="cursor: pointer;">
+            Presentations
+        </h4></div><hr/></div><div id="/presentations_desc" class="desc_resources" style="
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;"><div class="panel" id="/presentations_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /presentations
+            </div><div class="panel-body">
+                This is get method
+
+                
+                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">title</span>: Filter by title</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A collection of product Presentations&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;size&quot;: 
+		{
+			&quot;type&quot;: &quot;integer&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;presentations&quot;: 
+		{
+			&quot;type&quot;: &quot;array&quot;,
+			&quot;items&quot;: 
+			{
+				&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+				&quot;type&quot;: &quot;object&quot;,
+				&quot;description&quot;: &quot;A single product Presentation&quot;,
+				&quot;properties&quot;: 
+				{
+					&quot;id&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;title&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;description&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;fileUrl&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;productId&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					}
+				},
+				&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+			}
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentations.json&quot;
+}</code></pre></li></ul></div><div class="panel" id="/presentations_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /presentations
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre></li></ul></div></div><div id="/presentations/{presentationId}">
+    URl: /presentations/{presentationId}
+    
+    <div onclick="show_description('/presentations/{presentationId}')"><div style="float: right;"><a href="#/presentations/{presentationId}_desc_GET"><div class="label label-primary">GET
+                                            </div></a><a href="#/presentations/{presentationId}_desc_PUT"><div class="label label-warning">PUT
+                                            </div></a><a href="#/presentations/{presentationId}_desc_PATCH"><div class="label label-info">PATCH
+                                            </div></a><a href="#/presentations/{presentationId}_desc_DELETE"><div class="label label-danger">DELETE
+                                            </div></a></div><h4 style="cursor: pointer;">
+            One presentation
+        </h4></div><hr/></div><div id="/presentations/{presentationId}_desc" class="desc_resources" style="
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;"><div class="panel" id="/presentations/{presentationId}_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre><h6>Example</h6><pre><code>{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;first product&quot;,
+  &quot;description&quot;: &quot;Contrary to popular belief&quot;,
+  &quot;price&quot;: 100.00
+}
+</code></pre></li></ul></div><div class="panel" id="/presentations/{presentationId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre></li></ul></div><div class="panel" id="/presentations/{presentationId}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre></li></ul></div><div class="panel" id="/presentations/{presentationId}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="/products">
+    URl: /products
+    
+    <div onclick="show_description('/products')"><div style="float: right;"><a href="#/products_desc_GET"><div class="label label-primary">GET
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/products_desc_POST"><div class="label label-success">POST
+                                            </div></a></div><h4 style="cursor: pointer;">
+            Products
+        </h4></div><hr/></div><div id="/products_desc" class="desc_resources" style="
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;"><div class="panel" id="/products_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products
+            </div><div class="panel-body">
+                This is get method
+
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('jwt')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><div class="alert alert-warning" onclick="show_description('oauth_1_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_1_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">region</span>: Filter by region</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A collection of Products&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;size&quot;: 
+		{
+			&quot;type&quot;: &quot;integer&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;products&quot;: 
+		{
+			&quot;type&quot;: &quot;array&quot;,
+			&quot;items&quot;: 
+			{
+				&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+				&quot;type&quot;: &quot;object&quot;,
+				&quot;description&quot;: &quot;A single Product&quot;,
+				&quot;properties&quot;: 
+				{
+					&quot;id&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;name&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;description&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;imageUrl&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;region&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					}
+				},
+				&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+			}
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/products.json&quot;
+}</code></pre></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
+revoked or expired an access token. To fix, you should re-
+authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
+timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul></div><div class="panel" id="/products_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /products
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre></li></ul></div></div><div id="/products/{productId}">
+    URl: /products/{productId}
+    
+    <div onclick="show_description('/products/{productId}')"><div style="float: right;"><a href="#/products/{productId}_desc_GET"><div class="label label-primary">GET
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/products/{productId}_desc_PUT"><div class="label label-warning">PUT
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/products/{productId}_desc_PATCH"><div class="label label-info">PATCH
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/products/{productId}_desc_DELETE"><div class="label label-danger">DELETE
+                                            </div></a></div><h4 style="cursor: pointer;">
+            One products
+        </h4></div><hr/></div><div id="/products/{productId}_desc" class="desc_resources" style="
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;"><div class="panel" id="/products/{productId}_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products/{productId}
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('jwt')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre><h6>Example</h6><pre><code>{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;first product&quot;,
+  &quot;description&quot;: &quot;Contrary to popular belief&quot;,
+  &quot;price&quot;: 100.00
+}
+</code></pre></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="/products/{productId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('jwt')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="/products/{productId}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /products/{productId}
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('jwt')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single Product&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;name&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;imageUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;region&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/product.json&quot;
+}</code></pre></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="/products/{productId}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /products/{productId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="/products/{productId}/presentations">
+    URl: /products/{productId}/presentations
+    
+    <div onclick="show_description('/products/{productId}/presentations')"><div style="float: right;"><a href="#/products/{productId}/presentations_desc_GET"><div class="label label-primary">GET
+                                            </div></a><a href="#/products/{productId}/presentations_desc_POST"><div class="label label-success">POST
+                                            </div></a></div><h4 style="cursor: pointer;">
+            Presentations
+        </h4></div><hr/></div><div id="/products/{productId}/presentations_desc" class="desc_resources" style="
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;"><div class="panel" id="/products/{productId}/presentations_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products/{productId}/presentations
+            </div><div class="panel-body">
+                This is get method
+
+                
+                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">title</span>: Filter by title</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A collection of product Presentations&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;size&quot;: 
+		{
+			&quot;type&quot;: &quot;integer&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;presentations&quot;: 
+		{
+			&quot;type&quot;: &quot;array&quot;,
+			&quot;items&quot;: 
+			{
+				&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+				&quot;type&quot;: &quot;object&quot;,
+				&quot;description&quot;: &quot;A single product Presentation&quot;,
+				&quot;properties&quot;: 
+				{
+					&quot;id&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;title&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;description&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;
+					},
+					&quot;fileUrl&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					},
+					&quot;productId&quot;: 
+					{
+						&quot;type&quot;: &quot;string&quot;,
+						&quot;required&quot;: true
+					}
+				},
+				&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+			}
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentations.json&quot;
+}</code></pre></li></ul></div><div class="panel" id="/products/{productId}/presentations_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /products/{productId}/presentations
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre></li></ul></div></div><div id="/products/{productId}/presentations/{presentationId}">
+    URl: /products/{productId}/presentations/{presentationId}
+    
+    <div onclick="show_description('/products/{productId}/presentations/{presentationId}')"><div style="float: right;"><a href="#/products/{productId}/presentations/{presentationId}_desc_GET"><div class="label label-primary">GET
+                                            </div></a><a href="#/products/{productId}/presentations/{presentationId}_desc_PUT"><div class="label label-warning">PUT
+                                            </div></a><a href="#/products/{productId}/presentations/{presentationId}_desc_PATCH"><div class="label label-info">PATCH
+                                            </div></a><a href="#/products/{productId}/presentations/{presentationId}_desc_DELETE"><div class="label label-danger">DELETE
+                                            </div></a></div><h4 style="cursor: pointer;">
+            One presentation
+        </h4></div><hr/></div><div id="/products/{productId}/presentations/{presentationId}_desc" class="desc_resources" style="
+    display: block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0; top: 0;
+    overflow: auto;
+    background-color: #ccc;
+    padding: 10px;"><div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products/{productId}/presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre><h6>Example</h6><pre><code>{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;first product&quot;,
+  &quot;description&quot;: &quot;Contrary to popular belief&quot;,
+  &quot;price&quot;: 100.00
+}
+</code></pre></li></ul></div><div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}/presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre></li></ul></div><div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /products/{productId}/presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </li><li class="list-group-item"><h6>Schema</h6><pre><code>{
+	&quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+	&quot;type&quot;: &quot;object&quot;,
+	&quot;description&quot;: &quot;A single product Presentation&quot;,
+	&quot;properties&quot;: 
+	{
+		&quot;id&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;title&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;description&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;
+		},
+		&quot;fileUrl&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		},
+		&quot;productId&quot;: 
+		{
+			&quot;type&quot;: &quot;string&quot;,
+			&quot;required&quot;: true
+		}
+	},
+	&quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/schema/presentation.json&quot;
+}</code></pre></li></ul></div><div class="panel" id="/products/{productId}/presentations/{presentationId}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /products/{productId}/presentations/{presentationId}
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div></div></div></div>
+<script type="text/javascript">
+    function show_description(id){
+
+    window.location.hash = id+'_desc_GET';
+
+    var all = document.getElementsByClassName('desc_resources');
+
+    for (var i = 0; i < all.length; i++) {
+        all[i].style['display'] = 'none';
+    }
+
+    var el = document.getElementById(id+'_desc');
+    if (el.style['display'] == 'none') {
+        el.style['display'] = 'block';
+    } else {
+        el.style['display'] = 'none';
+    }
+
+    var allActive = document.getElementsByClassName('active_tab');
+
+    if (allActive.length > 0) {
+        for (i = 0; i < allActive.length; i++) {
+            allActive[i].className = '';
+        }
+    }
+
+    var current = document.getElementById(id);
+    if (current) {
+        current.className = 'active_tab';
+    }
+}
+</script>
+
+</body>
+</html>
