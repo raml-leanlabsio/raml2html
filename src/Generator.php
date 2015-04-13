@@ -51,50 +51,6 @@ class Generator
      */
     public function generate($output)
     {
-        $security = [];
-
-        /**
-         * @var $resource \Raml\Resource
-         */
-        foreach ($this->specification->getResources() as $resource) {
-            $resource->getUri();
-            /**
-             * @var $method \Raml\Method
-             */
-            $methods =  $resource->getMethods();
-            foreach ($methods as $method) {
-                $method->getType();
-                //var_dump($method->getHeaders());
-                /**
-                 * @var $response Response
-                 */
-                foreach ($method->getResponses() as $response)
-                {
-                    /*var_dump($response->getStatusCode());
-                    die();*/
-                    //var_dump($response->getTypes());
-                    /**
-                     * @var $body \Raml\Body
-                     */
-                    //$body = $response->getBodyByType('application/json');
-                    //$body->getSchema();
-                    //$response->getBodyByType();
-                }
-
-
-                /*foreach($method->getSecuritySchemes() as  $security){
-                    $security[$security->getType()] = $security;
-                }*/
-                $security = $method->getSecuritySchemes();
-            }
-        }
-
-        foreach ($this->specification->getSecuritySchemes() as $scheme) {
-            if ($scheme) {
-                $scheme->getSettings();
-            }
-        }
-
         $html = $this->twig->render('index.html.twig', array(
             'title'     => $this->specification->getTitle(),
             'base_url'  => $this->specification->getBaseUrl(),
