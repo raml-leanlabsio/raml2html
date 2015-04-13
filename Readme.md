@@ -1,10 +1,8 @@
 ## Install
 
-> git clone git@gitlab.com:raml/raml2html.git
+### Install command
 
-And
-
-> composer update
+> git clone git@gitlab.com:raml/raml2html.git && cd raml2html && composer update --no-dev
 
 ## Usage
 
