@@ -1,5 +1,6 @@
 {% set statusesColor = {
 "200": "success",
+"204": "success",
 "301": "info",
 "401": "success",
 "201": "success",
@@ -19,7 +20,7 @@
     </li>
     {% for response in responses %}
         <li class="list-group-item">
-            <h5>Http Status code <div class="label label-{{ statusesColor[response.statusCode] }}" style="font-size: 16px;">{{ response.statusCode }}</div></h5>
+            <h5>Http Status code <div class="label label-{% if statusesColor[response.statusCode] %}{{ statusesColor[response.statusCode] }}{% else %}primary{% endif %}" style="font-size: 16px;">{{ response.statusCode }}</div></h5>
             <div>{{ response.description }}</div>
         </li>
         {% for response_type in response.types %}
