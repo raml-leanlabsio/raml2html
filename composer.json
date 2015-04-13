@@ -10,11 +10,15 @@
   ],
   "autoload": {
     "psr-4": {
-      "Cnam\\": "src/"
+      "Cnam\\": "src/",
+      "Raml\\": "library/alecsammon/php-raml-parser/src/"
     }
   },
   "require": {
-    "alecsammon/php-raml-parser": "1.0.0",
+    "justinrainbow/json-schema": "@dev",
+    "symfony/yaml": "~2.5",
+    "symfony/routing": "~2.5",
+    "oodle/inflect": "0.2.0",
     "twig/twig": "1.18.0",
     "symfony/console": "2.6.6"
   }
