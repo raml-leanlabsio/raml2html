@@ -42,12 +42,22 @@ class GenerateCommand extends Command
 
         $generator = new Generator();
 
+        if (!file_exists($inputFile)) {
+            $output->writeln('<error>Input file require not exists<error>');
+            return;
+        }
+
+        if (empty($outputFile)) {
+            $output->writeln('<error>Output file cannot be empty<error>');
+            return;
+        }
+
         try {
             $generator->parse(realpath($inputFile));
             $generator->generate($outputFile);
-            $text = 'api generate success for run copy text file://'.realpath($outputFile);
+            $text = '<info>api generate success for run copy text file://'.realpath($outputFile).'<info>';
         } catch (\Exception $e) {
-            $text = $e->getMessage();
+            $text = '<error>'.$e->getMessage().'<error>';
         }
 
         $output->writeln($text);
