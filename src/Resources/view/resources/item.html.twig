@@ -12,7 +12,7 @@
     <div onclick="show_description('{{ resource.uri|md5 }}')">
         <div style="float: right;">
             {% for method in resource.methods %}
-                <a href="#{{ resource.uri }}_desc_{{ method.type }}">
+                <a href="#{{ resource.uri|md5 }}_desc_{{ method.type }}">
                     <div class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}
                         {% if method.getSecuritySchemes()|length > 0 %}
                             <i class="glyphicon glyphicon-lock"></i>
@@ -54,6 +54,10 @@
                         </div>
                     {% endfor %}
                 {% endif %}
+
+                {#{% for mediaType, body in method.bodies %}
+
+                {% endfor %}#}
 
                 {% set headers = method.headers %}
                 {% set queryParameters = method.queryParameters %}

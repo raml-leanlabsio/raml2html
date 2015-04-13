@@ -147,6 +147,14 @@ class Method implements ArrayInstantiationInterface
             }
         }
 
+        if (isset($data['baseUriParameters'])) {
+            foreach ($data['baseUriParameters'] as $key => $queryParameterData) {
+                $method->addBaseUriParameter(
+                    NamedParameter::createFromArray($key, $queryParameterData)
+                );
+            }
+        }
+
         if (isset($data['headers'])) {
             foreach ($data['headers'] as $key => $header) {
                 $method->addHeader(NamedParameter::createFromArray($key, $header));
@@ -374,7 +382,7 @@ class Method implements ArrayInstantiationInterface
     /**
      * Get an array of all bodies
      *
-     * @return array The array of bodies
+     * @return BodyInterface[] The array of bodies
      */
     public function getBodies()
     {

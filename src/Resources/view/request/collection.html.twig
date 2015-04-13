@@ -1,4 +1,19 @@
 <h4 style="margin-bottom: 25px;">Request</h4>
+
+{% if baseUriParameters %}
+    <h5>Base Uri Parameters</h5>
+    <ul>
+        {% for baseUriParameterName, baseUriParameter in baseUriParameters %}
+            <li>
+                <div><span style="font-weight: bold;">{{ baseUriParameterName }}</span>: {{ baseUriParameter.description }}</div>
+                {% if baseUriParameter.example %}
+                    <pre><code>{{ baseUriParameter.example }}</code></pre>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 {% if queryParameters %}
     <h5>Query parameters</h5>
     <ul>
@@ -12,6 +27,7 @@
     {% endfor %}
     </ul>
 {% endif %}
+
 {% if headers %}
     <hr/>
     <h5>Headers</h5>
