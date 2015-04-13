@@ -474,7 +474,7 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#669b943444452f3154cf564697e2937a_desc_PUT"><div class="label label-warning">PUT
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#669b943444452f3154cf564697e2937a_desc_PATCH"><div class="label label-info">PATCH
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#669b943444452f3154cf564697e2937a_desc_DELETE"><div class="label label-danger">DELETE
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
             One presentation
         </h4></div><hr/></div><div id="669b943444452f3154cf564697e2937a_desc" class="desc_resources" style="
     display: none;
@@ -606,12 +606,15 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="669b943444452f3154cf564697e2937a_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /presentations/{presentationId}
-            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="51679ce3738a69b94d40325e0e3d57db">
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div><div id="51679ce3738a69b94d40325e0e3d57db">
     URl: /products
     
     <div onclick="show_description('51679ce3738a69b94d40325e0e3d57db')"><div style="float: right;"><a href="#51679ce3738a69b94d40325e0e3d57db_desc_GET"><div class="label label-primary">GET
-                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#51679ce3738a69b94d40325e0e3d57db_desc_POST"><div class="label label-success">POST
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                            </div></a><a href="#51679ce3738a69b94d40325e0e3d57db_desc_POST"><div class="label label-success">POST
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
             Products
         </h4></div><hr/></div><div id="51679ce3738a69b94d40325e0e3d57db_desc" class="desc_resources" style="
     display: none;
@@ -625,11 +628,9 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
             </div><div class="panel-body">
                 This is get method
 
-                                    <br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><div class="alert alert-warning" onclick="show_description('d750fa1dbf8ce89aab2f10694247f2a9')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_1_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">region</span>: Filter by region</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
-
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                
+                
+                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">region</span>: Filter by region</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -681,11 +682,12 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
         }
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/products.json&quot;
-}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
-revoked or expired an access token. To fix, you should re-
-authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
-timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul></div><div class="panel" id="51679ce3738a69b94d40325e0e3d57db_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /products
-            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+}</textarea></div></li></ul></div><div class="panel" id="51679ce3738a69b94d40325e0e3d57db_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /products
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><div class="alert alert-warning" onclick="show_description('d750fa1dbf8ce89aab2f10694247f2a9')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_1_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -718,14 +720,17 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
         }
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/product.json&quot;
-}</textarea></div></li></ul></div></div><div id="06efbcd37c38760e8f8755d4dd22d65f">
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
+revoked or expired an access token. To fix, you should re-
+authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
+timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul></div></div><div id="06efbcd37c38760e8f8755d4dd22d65f">
     URl: /products/{productId}
     
     <div onclick="show_description('06efbcd37c38760e8f8755d4dd22d65f')"><div style="float: right;"><a href="#06efbcd37c38760e8f8755d4dd22d65f_desc_GET"><div class="label label-primary">GET
-                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#06efbcd37c38760e8f8755d4dd22d65f_desc_PUT"><div class="label label-warning">PUT
+                                            </div></a><a href="#06efbcd37c38760e8f8755d4dd22d65f_desc_PUT"><div class="label label-warning">PUT
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#06efbcd37c38760e8f8755d4dd22d65f_desc_PATCH"><div class="label label-info">PATCH
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#06efbcd37c38760e8f8755d4dd22d65f_desc_DELETE"><div class="label label-danger">DELETE
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
             One products
         </h4></div><hr/></div><div id="06efbcd37c38760e8f8755d4dd22d65f_desc" class="desc_resources" style="
     display: none;
@@ -736,10 +741,7 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     overflow: auto;
     background-color: #ccc;
     padding: 10px;"><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products/{productId}
-            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
-
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -779,7 +781,7 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
   &quot;description&quot;: &quot;Contrary to popular belief&quot;,
   &quot;price&quot;: 100.00
 }
-</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}
+</textarea></div></li></ul></div><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}
             </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
                         </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
@@ -854,7 +856,10 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/product.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /products/{productId}
-            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="12cc057a9576a25da6970cd08fc71470">
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div><div id="12cc057a9576a25da6970cd08fc71470">
     URl: /products/{productId}/presentations
     
     <div onclick="show_description('12cc057a9576a25da6970cd08fc71470')"><div style="float: right;"><a href="#12cc057a9576a25da6970cd08fc71470_desc_GET"><div class="label label-primary">GET
@@ -974,7 +979,7 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_PUT"><div class="label label-warning">PUT
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_PATCH"><div class="label label-info">PATCH
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_DELETE"><div class="label label-danger">DELETE
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
             One presentation
         </h4></div><hr/></div><div id="d97fa0af80e6538a5cf17a0dcc4d4b3f_desc" class="desc_resources" style="
     display: none;
@@ -1106,7 +1111,10 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     },
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /products/{productId}/presentations/{presentationId}
-            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div></div></div></div>
+            </div><div class="panel-body"><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+
+                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div></div></div></div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
     function show_description(id) {

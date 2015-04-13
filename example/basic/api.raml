@@ -88,6 +88,15 @@ resourceTypes:
               application/json:
                 schema: <<itemSchema>>
       delete:
+        body:
+          application/json:
+            schema: <<itemSchema>>
+        response:
+           204:
+            body:
+              application/json:
+                  description:
+                    Deleted success
 traits:
   - paged:
       queryParameters:
@@ -99,13 +108,6 @@ traits:
           displayName: pages
           description: The number of pages to return
           type: integer
-  - secured:
-      headers:
-        Authorization:
-          description: The auth token for this request
-      responses:
-        401:
-          description: Unauthorized
 /presentations: &presentations
   displayName: Presentations
   type: { typedCollection: { itemSchema: presentation, collectionSchema: presentations } }
@@ -125,20 +127,21 @@ traits:
   displayName: Products
   type: { typedCollection: { itemSchema: product, collectionSchema: products } }
   get:
-    securedBy: [jwt, oauth_1_0]
     description: This is get method
     queryParameters:
       region:
         type: string
         displayName: region
         description: Filter by region
+  post:
+    securedBy: [jwt, oauth_1_0]
   /{productId}:
     displayName: One products
     type: { typedMember: { itemSchema: product } }
-    get:
-        securedBy: [jwt]
     put:
         securedBy: [jwt]
     patch:
+        securedBy: [jwt]
+    delete:
         securedBy: [jwt]
     /presentations: *presentations
