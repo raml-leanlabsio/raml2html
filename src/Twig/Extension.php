@@ -48,7 +48,7 @@ class Extension extends  Twig_Extension
 
         foreach ($in as $key=>$value)
         {
-            $out .= str_repeat("\t", $indent + 1);
+            $out .= str_repeat("    ", $indent + 1);
             $out .= "\"".$_escape((string)$key)."\": ";
 
             if (is_object($value) || is_array($value))
@@ -81,8 +81,8 @@ class Extension extends  Twig_Extension
             $out = substr($out, 0, -2);
         }
 
-        $out = str_repeat("\t", $indent) . "{\n" . $out;
-        $out .= "\n" . str_repeat("\t", $indent) . "}";
+        $out = str_repeat("    ", $indent) . "{\n" . $out;
+        $out .= "\n" . str_repeat("    ", $indent) . "}";
 
         return $out;
     }

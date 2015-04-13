@@ -30,11 +30,11 @@
                 {% set body = response.getBodyByType(response_type) %}
                 {% if body.schema %}
                     <h6>Schema</h6>
-                    <pre><code>{{ body.schema|readable_json }}</code></pre>
+                    <div><textarea class="code">{{ body.schema|readable_json }}</textarea></div>
                 {% endif %}
                 {% if body.example %}
                     <h6>Example</h6>
-                    <pre><code>{{ file_loader(body.example) }}</code></pre>
+                    <div><textarea class="code">{{ file_loader(body.example)|trim }}</textarea></div>
                 {% endif %}
             </li>
         {% endfor %}

@@ -33,7 +33,10 @@ class Generator
             new JwtSecurityParser()
 
         ]);
-        $loader = new Twig_Loader_Filesystem(__DIR__.'/Resources/view');
+        $loader = new Twig_Loader_Filesystem([
+            '' => __DIR__.'/Resources/view',
+        ]);
+        $loader->addPath(__DIR__.'/Resources/static','static');
         $this->twig = new Twig_Environment($loader, ['debug' => true]);
         $this->twig->addExtension(new Extension());
     }

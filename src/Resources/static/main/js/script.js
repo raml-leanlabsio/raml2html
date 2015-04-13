@@ -4,11 +4,14 @@ function show_description(id){
 
     var all = document.getElementsByClassName('desc_resources');
 
+
     for (var i = 0; i < all.length; i++) {
         all[i].style['display'] = 'none';
     }
-
     var el = document.getElementById(id+'_desc');
+
+    jsonsh.init(el);
+
     if (el.style['display'] == 'none') {
         el.style['display'] = 'block';
     } else {
