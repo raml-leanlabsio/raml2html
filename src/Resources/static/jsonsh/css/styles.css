@@ -1,70 +1,19 @@
-:focus
-{
-    outline: 0;
-    outline: none;
-}
-::selection,
-::-moz-selection,
-::-webkit-selection,
-#wrapper
-{
-    padding: 25px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-.fail
-{
-    background-color: #f0dcd0;
-    color: #f05e07;
-    border: 1px solid #f05e07;
-}
-.fork
-{
-    position: absolute;
-    right: 25px;
-    top: 30px;
-    z-index: 100;
-    color: #222222;
-    text-decoration: none;
-}
-.fork:hover
-{
-    color: #f05e07;
-}
-.reset
-{
-    position: absolute;
-    right: 20px;
-    top: 75px;
-    color: #f05e07;
-    text-decoration: none;
-    display: none;
-}
-#output
-{
-    height: 500px;
-    display: block;
-    font-family: 'Anonymous Pro', sans-serif !important;
-    font-size: 12px;
-}
-
 /* Syntax Highlighter Styles */
 .pln
 {
-    color: #000000;
+    color: #222222;
 }
 @media screen
 {
     .str
     {
-        color: #101010;
+        color: #2f2f2f;
         font-family: 'Anonymous Pro', sans-serif;
         font-size: 12px;
     }
     .kwd
     {
-        color: #6f9ac5;
+        color: #4a6885;
         font-family: 'Anonymous Pro', sans-serif;
         font-size: 12px;
     }
@@ -82,13 +31,13 @@
     }
     .lit
     {
-        color: #6fc5bc;
+        color: #4a8480;
         font-family: 'Anonymous Pro', sans-serif;
         font-size: 12px;
     }
     .pun, .opn, .clo
     {
-        color: #f09158;
+        color: #F04D00;
         font-family: 'Anonymous Pro', sans-serif;
         font-size: 12px;
     }
@@ -126,11 +75,11 @@
 pre.prettyprint
 {
     border: none;
-    background-color: #DFDFDF;
+    background-color: #F4F4F4;
     font-family: 'Anonymous Pro', sans-serif;
     font-size: 12px;
     overflow: auto;
-    padding: 10px 2px;
+    padding: 15px 15px;
 }
 ol.linenums
 {
