@@ -6,7 +6,7 @@
 
 ## Usage
 
-> ./raml2html generate input.raml output.html
+> ./raml2html generate example/api.raml html/index.html
 
 input file and output file require
 
