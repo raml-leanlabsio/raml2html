@@ -1,6 +1,7 @@
 <h4 style="margin-bottom: 25px;">Request</h4>
 
 {% if uriParameters %}
+    <hr/>
     <h5>Uri Parameters</h5>
     <ul>
         {% for uriParameterName, uriParameter in uriParameters %}
@@ -15,6 +16,7 @@
 {% endif %}
 
 {% if baseUriParameters %}
+    <hr/>
     <h5>Base Uri Parameters</h5>
     <ul>
         {% for baseUriParameterName, baseUriParameter in baseUriParameters %}
@@ -29,6 +31,7 @@
 {% endif %}
 
 {% if queryParameters %}
+    <hr/>
     <h5>Query parameters</h5>
     <ul>
     {% for queryParameterName, queryParameter in queryParameters %}

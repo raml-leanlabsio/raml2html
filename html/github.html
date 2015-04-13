@@ -314,7 +314,7 @@ types of data, and can be revoked by users at any time.
             right: 0; top: 0;
             overflow: auto;
             background-color: #ccc;
-            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_2_0</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_2_0</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -354,7 +354,7 @@ the &quot;access_token&quot; query string parameter.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">q</span> (string)<br/> The search terms. This can be any combination of the supported repository
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">q</span> (string)<br/> The search terms. This can be any combination of the supported repository
 search parameters:
 &#039;Search In&#039; Qualifies which fields are searched. With this qualifier you
 can restrict the search to just the repository name, description, readme,
@@ -579,7 +579,7 @@ creation, or when they were last updated.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">q</span> (string)<br/> The search terms. This can be any combination of the supported code
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">q</span> (string)<br/> The search terms. This can be any combination of the supported code
 search parameters:
 &#039;Search In&#039; Qualifies which fields are searched. With this qualifier
 you can restrict the search to just the file contents, the file path,
@@ -988,7 +988,7 @@ by best match.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">q</span> (string)<br/> The search terms. This can be any combination of the supported user
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">q</span> (string)<br/> The search terms. This can be any combination of the supported user
 search parameters:
 &#039;Search In&#039; Qualifies which fields are searched. With this qualifier you
 can restrict the search to just the username, public email, full name,
@@ -1572,7 +1572,7 @@ List all issues across all the authenticated user&#039;s visible repositories.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
 subscribed to updates for / All issues the authenticated user can see
 </div></li><li><div><span style="font-weight: bold;">state</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">labels</span> (string)<br/> String list of comma separated Label names. Example - bug,ui,@high.</div></li><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
 Only issues updated at or after this time are returned.
@@ -1891,7 +1891,7 @@ List all notifications for the current user, grouped by repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">all</span> (string)<br/> True to show notifications marked as read.</div></li><li><div><span style="font-weight: bold;">participating</span> (string)<br/> True to show only notifications in which the user is directly participating
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">all</span> (string)<br/> True to show notifications marked as read.</div></li><li><div><span style="font-weight: bold;">participating</span> (string)<br/> True to show only notifications in which the user is directly participating
 or mentioned.
 </div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Time filters out any notifications updated before the given time. The
 time should be passed in as UTC in the ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
@@ -2086,7 +2086,7 @@ Marking a notification as &quot;read&quot; removes it from the default view on G
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -2248,7 +2248,7 @@ Marking a notification as &quot;read&quot; removes it from the default view on G
     &quot;url&quot;: &quot;https://api.github.com/notifications/threads/1&quot;
   }
 ]</textarea></div></li></ul></div><div class="panel" id="6da862070353a0e8ba301c8a0c9a623c_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /notifications/threads/{id}
-            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">205</div></h5><div>Thread marked as read.</div></li></ul></div></div><div id="98c2614ec1f1dda683343dab48519863">
+            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">205</div></h5><div>Thread marked as read.</div></li></ul></div></div><div id="98c2614ec1f1dda683343dab48519863">
     URl: /notifications/threads/{id}/subscription
     
     <div onclick="show_description('98c2614ec1f1dda683343dab48519863')"><div style="float: right;"><a href="#98c2614ec1f1dda683343dab48519863_desc_GET"><div class="label label-primary">GET
@@ -2388,7 +2388,7 @@ return all public gists.
 
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
 </div></li><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
@@ -2536,7 +2536,7 @@ the &quot;access_token&quot; query string parameter.
                 Create a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -2836,7 +2836,7 @@ the &quot;access_token&quot; query string parameter.
                 List all public gists.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
 </div></li><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
@@ -2998,7 +2998,7 @@ the &quot;access_token&quot; query string parameter.
                 List the authenticated user&#039;s starred gists.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
 </div></li><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
@@ -3162,7 +3162,7 @@ the &quot;access_token&quot; query string parameter.
                 Get a single gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3448,7 +3448,7 @@ the &quot;access_token&quot; query string parameter.
                 Edit a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3734,7 +3734,7 @@ the &quot;access_token&quot; query string parameter.
                 Delete a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3760,7 +3760,7 @@ the &quot;access_token&quot; query string parameter.
                 Star a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3770,7 +3770,7 @@ the &quot;access_token&quot; query string parameter.
                 Unstar a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3780,7 +3780,7 @@ the &quot;access_token&quot; query string parameter.
                 Check if a gist is starred.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3804,7 +3804,7 @@ the &quot;access_token&quot; query string parameter.
                 Fork a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3829,7 +3829,7 @@ the &quot;access_token&quot; query string parameter.
                 List comments on a gist.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -3913,7 +3913,7 @@ the &quot;access_token&quot; query string parameter.
                 Create a comment
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -4004,7 +4004,7 @@ the &quot;access_token&quot; query string parameter.
                 Get a single comment.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -4079,7 +4079,7 @@ the &quot;access_token&quot; query string parameter.
                 Edit a comment.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -4154,7 +4154,7 @@ the &quot;access_token&quot; query string parameter.
                 Delete a comment.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -4180,7 +4180,7 @@ the &quot;access_token&quot; query string parameter.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -4277,7 +4277,7 @@ the &quot;access_token&quot; query string parameter.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -4552,7 +4552,7 @@ List all issues for a given organization for the authenticated user.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
 subscribed to updates for / All issues the authenticated user can see
 </div></li><li><div><span style="font-weight: bold;">state</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">labels</span> (string)<br/> String list of comma separated Label names. Example - bug,ui,@high.</div></li><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
 Only issues updated at or after this time are returned.
@@ -4940,7 +4940,7 @@ will no longer have any access to the organization&#039;s repositories.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="f71c315a50ad5360bb2d7e8de0b0704d">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="f71c315a50ad5360bb2d7e8de0b0704d">
     URl: /orgs/{orgId}/public_members
     
     <div onclick="show_description('f71c315a50ad5360bb2d7e8de0b0704d')"><div style="float: right;"><a href="#f71c315a50ad5360bb2d7e8de0b0704d_desc_GET"><div class="label label-primary">GET
@@ -5029,19 +5029,19 @@ or not.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a public member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a public member.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /orgs/{orgId}/public_members/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a public member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a public member.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /orgs/{orgId}/public_members/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Publicize a user&#039;s membership.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Publicized.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /orgs/{orgId}/public_members/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Publicized.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /orgs/{orgId}/public_members/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Conceal a user&#039;s membership.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Concealed.</div></li></ul></div></div><div id="158b0a6af965e2e1db7fec43f54b63bc">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Concealed.</div></li></ul></div></div><div id="158b0a6af965e2e1db7fec43f54b63bc">
     URl: /orgs/{orgId}/teams
     
     <div onclick="show_description('158b0a6af965e2e1db7fec43f54b63bc')"><div style="float: right;"><a href="#158b0a6af965e2e1db7fec43f54b63bc_desc_GET"><div class="label label-primary">GET
@@ -5164,7 +5164,7 @@ In order to create a team, the authenticated user must be an owner of orgId.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">type</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">type</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -5572,7 +5572,7 @@ repo scope.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -5620,7 +5620,7 @@ that the team is associated with.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -5667,7 +5667,7 @@ org that the team is associated with.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="4001bbc26e91e8ecdaebfa8d629c0763">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="4001bbc26e91e8ecdaebfa8d629c0763">
     URl: /teams/{teamsId}/members
     
     <div onclick="show_description('4001bbc26e91e8ecdaebfa8d629c0763')"><div style="float: right;"><a href="#4001bbc26e91e8ecdaebfa8d629c0763_desc_GET"><div class="label label-primary">GET
@@ -5759,7 +5759,7 @@ be a member of the team.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a member.</div></li></ul></div><div class="panel" id="64aded46116ea6613224800c18d34b67_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /teams/{teamsId}/members/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a member.</div></li></ul></div><div class="panel" id="64aded46116ea6613224800c18d34b67_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /teams/{teamsId}/members/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Add team member.
 In order to add a user to a team, the authenticated user must have &#039;admin&#039;
@@ -5769,7 +5769,7 @@ with.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member added.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">422</div></h5><div>If you attempt to add an organization to a team, you will get this.</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member added.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">422</div></h5><div>If you attempt to add an organization to a team, you will get this.</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -5825,7 +5825,7 @@ NOTE This does not delete the user, it just remove them from the team.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member removed.</div></li></ul></div></div><div id="e17ce4f86c78707970c6d8b94844120f">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member removed.</div></li></ul></div></div><div id="e17ce4f86c78707970c6d8b94844120f">
     URl: /repositories
     
     <div onclick="show_description('e17ce4f86c78707970c6d8b94844120f')"><div style="float: right;"><a href="#e17ce4f86c78707970c6d8b94844120f_desc_GET"><div class="label label-primary">GET
@@ -5850,7 +5850,7 @@ Link header to get the URL for the next page of repositories.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('37a6259cc0c1dae299a7866489dff0bd')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by null
                         </div><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> The integer ID of the last Repository that you&#039;ve seen.</div></li><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> The integer ID of the last Repository that you&#039;ve seen.</div></li><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -5970,7 +5970,7 @@ the &quot;access_token&quot; query string parameter.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -6560,7 +6560,7 @@ the &quot;access_token&quot; query string parameter.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -7152,7 +7152,7 @@ scope is required.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="adfa149a1c7618b48d293eedf6a6cc7e">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="adfa149a1c7618b48d293eedf6a6cc7e">
     URl: /repos/{ownerId}/{repoId}/events
     
     <div onclick="show_description('adfa149a1c7618b48d293eedf6a6cc7e')"><div style="float: right;"><a href="#adfa149a1c7618b48d293eedf6a6cc7e_desc_GET"><div class="label label-primary">GET
@@ -7430,7 +7430,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (string)<br/> SHA-1 code.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (string)<br/> SHA-1 code.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -7558,7 +7558,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (string)<br/> SHA-1 code.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (string)<br/> SHA-1 code.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -7839,7 +7839,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">heads</span> (string)<br/> Subfolder of path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">heads</span> (string)<br/> Subfolder of path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -7914,7 +7914,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -7964,7 +7964,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -8014,7 +8014,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="2964c5f992f32ffc311ed6f916daa127">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="2964c5f992f32ffc311ed6f916daa127">
     URl: /repos/{ownerId}/{repoId}/git/tags
     
     <div onclick="show_description('2964c5f992f32ffc311ed6f916daa127')"><div style="float: right;"><a href="#2964c5f992f32ffc311ed6f916daa127_desc_POST"><div class="label label-success">POST
@@ -8343,7 +8343,7 @@ contents of that tree with the new path contents and write a new tree out.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (integer)<br/> Id of the owner.</div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">recursive</span> (integer)<br/> Get a Tree Recursively. (0 or 1)</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (integer)<br/> Id of the owner.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">recursive</span> (integer)<br/> Get a Tree Recursively. (0 or 1)</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -8441,7 +8441,7 @@ This method returns the preferred README for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">ref</span> (string)<br/> The String name of the Commit/Branch/Tag. Defaults to master.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">ref</span> (string)<br/> The String name of the Commit/Branch/Tag. Defaults to master.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -8884,7 +8884,7 @@ This method returns the preferred README for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">anon</span> (string)<br/> Set to 1 or true to include anonymous contributors in results.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">anon</span> (string)<br/> Set to 1 or true to include anonymous contributors in results.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -9016,7 +9016,7 @@ This method returns the preferred README for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branchId</span> (integer)<br/> Id of the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branchId</span> (integer)<br/> Id of the branch.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -9267,7 +9267,7 @@ This method returns the preferred README for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
 subscribed to updates for / All issues the authenticated user can see
 </div></li><li><div><span style="font-weight: bold;">state</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">labels</span> (string)<br/> String list of comma separated Label names. Example - bug,ui,@high.</div></li><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
 Only issues updated at or after this time are returned.
@@ -10036,7 +10036,7 @@ Any user with pull access to a repository can create an issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">eventId</span> (integer)<br/> Id of the event.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">eventId</span> (integer)<br/> Id of the event.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -10401,7 +10401,7 @@ Any user with pull access to a repository can create an issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the issue.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the issue.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -10692,7 +10692,7 @@ Issue owners and users with push access can edit an issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the issue.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the issue.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -11406,7 +11406,7 @@ Issue owners and users with push access can edit an issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">eventId</span> (integer)<br/> Id of the event.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">eventId</span> (integer)<br/> Id of the event.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -11903,7 +11903,7 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="bbdec2672868c725fe0e28f321d6d457">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="bbdec2672868c725fe0e28f321d6d457">
     URl: /repos/{ownerId}/{repoId}/issues/comments
     
     <div onclick="show_description('bbdec2672868c725fe0e28f321d6d457')"><div style="float: right;"><a href="#bbdec2672868c725fe0e28f321d6d457_desc_GET"><div class="label label-primary">GET
@@ -11923,7 +11923,7 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/> Ignored without sort parameter.</div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/> Ignored without sort parameter.</div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -12091,7 +12091,7 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -12173,7 +12173,7 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -12255,7 +12255,7 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="12f21aecec397d13350a8d075b029d7c">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="12f21aecec397d13350a8d075b029d7c">
     URl: /repos/{ownerId}/{repoId}/notifications
     
     <div onclick="show_description('12f21aecec397d13350a8d075b029d7c')"><div style="float: right;"><a href="#12f21aecec397d13350a8d075b029d7c_desc_GET"><div class="label label-primary">GET
@@ -12278,7 +12278,7 @@ List all notifications for the current user.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">all</span> (string)<br/> True to show notifications marked as read.</div></li><li><div><span style="font-weight: bold;">participating</span> (string)<br/> True to show only notifications in which the user is directly participating
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">all</span> (string)<br/> True to show notifications marked as read.</div></li><li><div><span style="font-weight: bold;">participating</span> (string)<br/> True to show only notifications in which the user is directly participating
 or mentioned.
 </div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Time filters out any notifications updated before the given time. The
 time should be passed in as UTC in the ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
@@ -12658,7 +12658,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">assignee</span> (string)<br/> Login of the assignee.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is an assignee.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User isn&#039;t an assignee.</div></li></ul></div></div><div id="edc53128ef8f395b4ce82fc7c2c58ac2">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">assignee</span> (string)<br/> Login of the assignee.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is an assignee.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User isn&#039;t an assignee.</div></li></ul></div></div><div id="edc53128ef8f395b4ce82fc7c2c58ac2">
     URl: /repos/{ownerId}/{repoId}/labels
     
     <div onclick="show_description('edc53128ef8f395b4ce82fc7c2c58ac2')"><div style="float: right;"><a href="#edc53128ef8f395b4ce82fc7c2c58ac2_desc_GET"><div class="label label-primary">GET
@@ -12770,7 +12770,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -12803,7 +12803,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -12836,7 +12836,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="8832eee23e642f4912b6ec9e7676b26f">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="8832eee23e642f4912b6ec9e7676b26f">
     URl: /repos/{ownerId}/{repoId}/milestones
     
     <div onclick="show_description('8832eee23e642f4912b6ec9e7676b26f')"><div style="float: right;"><a href="#8832eee23e642f4912b6ec9e7676b26f_desc_GET"><div class="label label-primary">GET
@@ -12857,7 +12857,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">state</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">state</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -13075,7 +13075,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -13176,7 +13176,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -13277,7 +13277,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="c4b1ecf11a49170980ea10134796a88a">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="c4b1ecf11a49170980ea10134796a88a">
     URl: /repos/{ownerId}/{repoId}/milestones/{number}/labels
     
     <div onclick="show_description('c4b1ecf11a49170980ea10134796a88a')"><div style="float: right;"><a href="#c4b1ecf11a49170980ea10134796a88a_desc_GET"><div class="label label-primary">GET
@@ -13354,7 +13354,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">state</span> (string)<br/> String to filter by state.</div></li><li><div><span style="font-weight: bold;">head</span> (string)<br/> Filter pulls by head user and branch name in the format of &#039;user:ref-name&#039;.
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">state</span> (string)<br/> String to filter by state.</div></li><li><div><span style="font-weight: bold;">head</span> (string)<br/> Filter pulls by head user and branch name in the format of &#039;user:ref-name&#039;.
 Example: github:new-script-format.
 </div></li><li><div><span style="font-weight: bold;">base</span> (string)<br/> Filter pulls by base branch name. Example - gh-pages.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
@@ -14701,7 +14701,7 @@ Example: github:new-script-format.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -15372,7 +15372,7 @@ Example: github:new-script-format.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -17275,7 +17275,7 @@ By default, Review Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/> Ignored without &#039;sort&#039; parameter.</div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/> Ignored without &#039;sort&#039; parameter.</div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -17443,7 +17443,7 @@ By default, Review Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -17586,7 +17586,7 @@ By default, Review Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -17729,7 +17729,7 @@ By default, Review Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="73859b8580bff1e44274ec365b431fa4">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="73859b8580bff1e44274ec365b431fa4">
     URl: /repos/{ownerId}/{repoId}/collaborators
     
     <div onclick="show_description('73859b8580bff1e44274ec365b431fa4')"><div style="float: right;"><a href="#73859b8580bff1e44274ec365b431fa4_desc_GET"><div class="label label-primary">GET
@@ -17820,19 +17820,19 @@ returned in the collaborators list.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a collaborator.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a collaborator.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /repos/{ownerId}/{repoId}/collaborators/{user}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a collaborator.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a collaborator.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /repos/{ownerId}/{repoId}/collaborators/{user}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Add collaborator.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator added.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /repos/{ownerId}/{repoId}/collaborators/{user}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator added.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /repos/{ownerId}/{repoId}/collaborators/{user}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Remove collaborator.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator removed.</div></li></ul></div></div><div id="d1ffbb0c00eece20b8570edc602752e1">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator removed.</div></li></ul></div></div><div id="d1ffbb0c00eece20b8570edc602752e1">
     URl: /repos/{ownerId}/{repoId}/comments
     
     <div onclick="show_description('d1ffbb0c00eece20b8570edc602752e1')"><div style="float: right;"><a href="#d1ffbb0c00eece20b8570edc602752e1_desc_GET"><div class="label label-primary">GET
@@ -17981,7 +17981,7 @@ Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -18083,7 +18083,7 @@ Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -18185,7 +18185,7 @@ Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="063fb6aab03990f625d868a7612c9196">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="063fb6aab03990f625d868a7612c9196">
     URl: /repos/{ownerId}/{repoId}/commits
     
     <div onclick="show_description('063fb6aab03990f625d868a7612c9196')"><div style="float: right;"><a href="#063fb6aab03990f625d868a7612c9196_desc_GET"><div class="label label-primary">GET
@@ -18205,7 +18205,7 @@ Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sha</span> (string)<br/> Sha or branch to start listing commits from.</div></li><li><div><span style="font-weight: bold;">path</span> (string)<br/> Only commits containing this file path will be returned.</div></li><li><div><span style="font-weight: bold;">author</span> (string)<br/> GitHub login, name, or email by which to filter by commit author.</div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> ISO 8601 Date - Only commits after this date will be returned.</div></li><li><div><span style="font-weight: bold;">until</span> (string)<br/> ISO 8601 Date - Only commits before this date will be returned.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sha</span> (string)<br/> Sha or branch to start listing commits from.</div></li><li><div><span style="font-weight: bold;">path</span> (string)<br/> Only commits containing this file path will be returned.</div></li><li><div><span style="font-weight: bold;">author</span> (string)<br/> GitHub login, name, or email by which to filter by commit author.</div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> ISO 8601 Date - Only commits after this date will be returned.</div></li><li><div><span style="font-weight: bold;">until</span> (string)<br/> ISO 8601 Date - Only commits before this date will be returned.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -18435,7 +18435,7 @@ Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (string)<br/> SHA-1 code of the commit.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">shaCode</span> (string)<br/> SHA-1 code of the commit.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -18909,7 +18909,7 @@ Here can be many outcomes. For details see &quot;http://developer.github.com/v3/
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/> The content path.</div></li><li><div><span style="font-weight: bold;">ref</span> (string)<br/> The String name of the Commit/Branch/Tag. Defaults to &#039;master&#039;.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/> The content path.</div></li><li><div><span style="font-weight: bold;">ref</span> (string)<br/> The String name of the Commit/Branch/Tag. Defaults to &#039;master&#039;.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -18999,7 +18999,7 @@ Here can be many outcomes. For details see &quot;http://developer.github.com/v3/
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -19125,7 +19125,7 @@ This method deletes a file in a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -19287,7 +19287,7 @@ Note: For private repositories, these links are temporary and expire quickly.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">archive_format</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">path</span> (string)<br/> Valid Git reference, defaults to &#039;master&#039;.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">302</div></h5><div>Found.</div></li></ul></div></div><div id="d3fb3eaf9f856ab70d3c96a150437da8">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">archive_format</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">path</span> (string)<br/> Valid Git reference, defaults to &#039;master&#039;.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">302</div></h5><div>Found.</div></li></ul></div></div><div id="d3fb3eaf9f856ab70d3c96a150437da8">
     URl: /repos/{ownerId}/{repoId}/downloads
     
     <div onclick="show_description('d3fb3eaf9f856ab70d3c96a150437da8')"><div style="float: right;"><a href="#d3fb3eaf9f856ab70d3c96a150437da8_desc_GET"><div class="label label-primary">GET
@@ -19500,7 +19500,7 @@ For part 2 see http://developer.github.com/v3/repos/downloads/#create-a-new-down
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">downloadId</span> (integer)<br/> Id of the download.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">downloadId</span> (integer)<br/> Id of the download.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -19553,7 +19553,7 @@ For part 2 see http://developer.github.com/v3/repos/downloads/#create-a-new-down
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">downloadId</span> (integer)<br/> Id of the download.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="586be817fa04452265b4ed852cc11195">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">downloadId</span> (integer)<br/> Id of the download.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="586be817fa04452265b4ed852cc11195">
     URl: /repos/{ownerId}/{repoId}/forks
     
     <div onclick="show_description('586be817fa04452265b4ed852cc11195')"><div style="float: right;"><a href="#586be817fa04452265b4ed852cc11195_desc_GET"><div class="label label-primary">GET
@@ -19574,7 +19574,7 @@ For part 2 see http://developer.github.com/v3/repos/downloads/#create-a-new-down
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -20065,7 +20065,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -20101,7 +20101,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -20137,7 +20137,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="1bb452c6582de3ea0d2c7a878ff100d6">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="1bb452c6582de3ea0d2c7a878ff100d6">
     URl: /repos/{ownerId}/{repoId}/hooks
     
     <div onclick="show_description('1bb452c6582de3ea0d2c7a878ff100d6')"><div style="float: right;"><a href="#1bb452c6582de3ea0d2c7a878ff100d6_desc_GET"><div class="label label-primary">GET
@@ -20370,7 +20370,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -20468,7 +20468,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -20566,7 +20566,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="d8537eed2a858fa3a18d4f2b0835e627">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="d8537eed2a858fa3a18d4f2b0835e627">
     URl: /repos/{ownerId}/{repoId}/hooks/{hookId}/tests
     
     <div onclick="show_description('d8537eed2a858fa3a18d4f2b0835e627')"><div style="float: right;"><a href="#d8537eed2a858fa3a18d4f2b0835e627_desc_POST"><div class="label label-success">POST
@@ -20923,7 +20923,7 @@ Note: Previously /repos/:owner/:repo/hooks/:id/test
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ref</span> (string)<br/> Ref to list the statuses from. It can be a SHA, a branch name, or a tag name.
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ref</span> (string)<br/> Ref to list the statuses from. It can be a SHA, a branch name, or a tag name.
 </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
@@ -21020,7 +21020,7 @@ Note: Previously /repos/:owner/:repo/hooks/:id/test
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ref</span> (string)<br/> Ref to list the statuses from. It can be a SHA, a branch name, or a tag name.
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ref</span> (string)<br/> Ref to list the statuses from. It can be a SHA, a branch name, or a tag name.
 </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
@@ -21984,7 +21984,7 @@ individual commits.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
                         </div><div class="alert alert-warning" onclick="show_description('37a6259cc0c1dae299a7866489dff0bd')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by null
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
@@ -22822,7 +22822,7 @@ Otherwise, you&#039;ll only see public events.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -22984,7 +22984,7 @@ Otherwise, you&#039;ll only see public events.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -23517,7 +23517,7 @@ You can include a single email address or an array of addresses.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if you are following this user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if you are not following this user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/following/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if you are following this user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if you are not following this user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/following/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Follow a user.
 Following a user requires the user to be logged in and authenticated with
@@ -23526,7 +23526,7 @@ basic auth or OAuth with the user:follow scope.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>You are now following the user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/following/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>You are now following the user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/following/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Unfollow a user.
 Unfollowing a user requires the user to be logged in and authenticated with
@@ -23535,7 +23535,7 @@ basic auth or OAuth with the user:follow scope.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User unfollowed.</div></li></ul></div></div><div id="fce31a695fedb45cfa5d1675690933ca">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User unfollowed.</div></li></ul></div></div><div id="fce31a695fedb45cfa5d1675690933ca">
     URl: /user/keys
     
     <div onclick="show_description('fce31a695fedb45cfa5d1675690933ca')"><div style="float: right;"><a href="#fce31a695fedb45cfa5d1675690933ca_desc_GET"><div class="label label-primary">GET
@@ -23656,7 +23656,7 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -23692,7 +23692,7 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -23728,7 +23728,7 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="5afc3c5f4ffe46bae510288c632042d9">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="5afc3c5f4ffe46bae510288c632042d9">
     URl: /user/starred
     
     <div onclick="show_description('5afc3c5f4ffe46bae510288c632042d9')"><div style="float: right;"><a href="#5afc3c5f4ffe46bae510288c632042d9_desc_GET"><div class="label label-primary">GET
@@ -23748,7 +23748,7 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -24192,19 +24192,19 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched by you.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Repository is not watched by you.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/subscriptions/{ownerId}/{repoId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched by you.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Repository is not watched by you.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/subscriptions/{ownerId}/{repoId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Watch a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/subscriptions/{ownerId}/{repoId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/subscriptions/{ownerId}/{repoId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Stop watching a repository
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Unwatched.</div></li></ul></div></div><div id="6c56ceaafcc976e9dbf644c9e8e65382">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Unwatched.</div></li></ul></div></div><div id="6c56ceaafcc976e9dbf644c9e8e65382">
     URl: /user/issues
     
     <div onclick="show_description('6c56ceaafcc976e9dbf644c9e8e65382')"><div style="float: right;"><a href="#6c56ceaafcc976e9dbf644c9e8e65382_desc_GET"><div class="label label-primary">GET
@@ -24227,7 +24227,7 @@ user.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">filter</span> (string)<br/> Issues assigned to you / created by you / mentioning you / you&#039;re
 subscribed to updates for / All issues the authenticated user can see
 </div></li><li><div><span style="font-weight: bold;">state</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">labels</span> (string)<br/> String list of comma separated Label names. Example - bug,ui,@high.</div></li><li><div><span style="font-weight: bold;">sort</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">direction</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">since</span> (string)<br/> Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
 Only issues updated at or after this time are returned.
@@ -24547,7 +24547,7 @@ user organizations and list organization repositories separately.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">type</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">type</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -24957,7 +24957,7 @@ header to get the URL for the next page of users.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (integer)<br/> The integer ID of the last User that you&#039;ve seen.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (integer)<br/> The integer ID of the last User that you&#039;ve seen.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -25021,7 +25021,7 @@ header to get the URL for the next page of users.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -25085,7 +25085,7 @@ header to get the URL for the next page of users.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">targetUserId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if user follows target user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if user does not follow target user.</div></li></ul></div></div><div id="d02ad0567a6e5e48af92d4f1e330512d">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">targetUserId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if user follows target user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if user does not follow target user.</div></li></ul></div></div><div id="d02ad0567a6e5e48af92d4f1e330512d">
     URl: /users/{userId}/keys
     
     <div onclick="show_description('d02ad0567a6e5e48af92d4f1e330512d')"><div style="float: right;"><a href="#d02ad0567a6e5e48af92d4f1e330512d_desc_GET"><div class="label label-primary">GET
@@ -25152,7 +25152,7 @@ Lists the verified public keys for a user. This is accessible by anyone.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('37a6259cc0c1dae299a7866489dff0bd')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by null
                         </div><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span> (string)<br/> Timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
 </div></li><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
@@ -25370,7 +25370,7 @@ the &quot;access_token&quot; query string parameter.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">type</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">type</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -25622,7 +25622,7 @@ List all templates available to pass as an option when creating a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">language</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">language</span> (string)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -25696,7 +25696,7 @@ List all templates available to pass as an option when creating a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
