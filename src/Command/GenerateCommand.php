@@ -43,12 +43,12 @@ class GenerateCommand extends Command
         $generator = new Generator();
 
         if (!file_exists($inputFile)) {
-            $output->writeln('<error>Input file require not exists<error>');
+            $output->writeln('<error>Input file require not exists<error>', OutputInterface::VERBOSITY_QUIET);
             return;
         }
 
         if (empty($outputFile)) {
-            $output->writeln('<error>Output file cannot be empty<error>');
+            $output->writeln('<error>Output file cannot be empty<error>', OutputInterface::VERBOSITY_QUIET);
             return;
         }
 
