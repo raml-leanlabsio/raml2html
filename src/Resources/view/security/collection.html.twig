@@ -3,14 +3,14 @@
     <h3>Security</h3>
     <br/>
     {% for key, scheme in security %}
-        <div id="{{ scheme.key }}">
-            <h4 onclick="show_description('{{ scheme.key }}')" style="cursor: pointer">{{ scheme.key }}</h4>
+        <div id="{{ scheme.key|md5 }}">
+            <h4 onclick="show_description('{{ scheme.key|md5 }}')" style="cursor: pointer">{{ scheme.key }}</h4>
             <div>
                 {{ scheme.description }}
             </div>
         </div>
 
-        <div id="{{ scheme.key }}_desc" class="desc_resources" style="
+        <div id="{{ scheme.key|md5 }}_desc" class="desc_resources" style="
             display: block;
             position: fixed;
             width: 50%;

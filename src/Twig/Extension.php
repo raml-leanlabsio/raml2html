@@ -22,7 +22,8 @@ class Extension extends  Twig_Extension
     {
         return [
             'readable_json' => new Twig_SimpleFilter('readable_json', array($this, 'readable_json')),
-            'generate_name' => new Twig_SimpleFilter('generate_name', array($this, 'generate_name'))
+            'generate_name' => new Twig_SimpleFilter('generate_name', array($this, 'generate_name')),
+            'md5'           => new Twig_SimpleFilter('md5', array($this, 'md5')),
         ];
     }
 
@@ -99,5 +100,10 @@ class Extension extends  Twig_Extension
     public function generate_name($name)
     {
         return preg_replace('/\//', ' ', $name);
+    }
+
+    public function md5($text)
+    {
+        return md5($text);
     }
 }
