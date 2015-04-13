@@ -7,6 +7,7 @@ use Raml\Exception\RamlParserException;
 
 use Raml\Schema\SchemaParserInterface;
 use Raml\Schema\Parser\JsonSchemaParser;
+use Raml\Schema\Parser\XmlSchemaParser;
 
 use Raml\SecurityScheme\SecuritySettingsParser\OAuth1SecuritySettingsParser;
 use Raml\SecurityScheme\SecuritySettingsParser\OAuth2SecuritySettingsParser;
@@ -54,11 +55,13 @@ class Parser
     private $fileLoaders = [];
 
     /**
-     * Default media type for all response body resources
+     * If directory tree traversal is allowed
      *
-     * @var string
+     * @todo change to "false" in v2.0.0
+     *
+     * @var boolean
      */
-    private $mediaType;
+    private $allowDirectoryTraversal = true;
 
     // ---
 
@@ -119,7 +122,22 @@ class Parser
         foreach ($fileLoaders as $fileLoader) {
             $this->addFileLoader($fileLoader);
         }
+    }
 
+    /**
+     * Allow directory tree traversal
+     */
+    public function allowDirectoryTraversal()
+    {
+        $this->allowDirectoryTraversal = true;
+    }
+
+    /**
+     * Allow directory tree traversal
+     */
+    public function preventDirectoryTraversal()
+    {
+        $this->allowDirectoryTraversal = false;
     }
 
     /**
@@ -472,16 +490,23 @@ class Parser
      */
     private function loadAndParseFile($fileName, $rootDir, $parseSchemas)
     {
-        $fullPath = $rootDir . '/' . $fileName;
+        $rootDir = realpath($rootDir);
+        $fullPath = realpath($rootDir . '/' . $fileName);
+
+        if (is_readable($fullPath) === false) {
+            return false;
+        }
+
+        // Prevent LFI directory traversal attacks
+        if (!$this->allowDirectoryTraversal && substr($fullPath, 0, strlen($rootDir)) !== $rootDir) {
+            return false;
+        }
+
         $cacheKey = md5($fullPath);
 
         // cache based on file name, prevents including/parsing the same file multiple times
         if (isset($this->cachedFiles[$cacheKey])) {
             return $this->cachedFiles[$cacheKey];
-        }
-
-        if (is_readable($fullPath) === false) {
-            return false;
         }
 
         $fileExtension = (pathinfo($fileName, PATHINFO_EXTENSION));

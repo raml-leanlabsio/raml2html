@@ -124,6 +124,15 @@ class ApiDefinition implements ArrayInstantiationInterface
      */
     private $securitySchemes = [];
 
+    /**
+     * A list of security schemes that the whole API is secured by
+     *
+     * @link http://raml.org/spec.html#usage-applying-a-security-scheme-to-an-api
+     *
+     * @var SecurityScheme[]
+     */
+    private $securedBy = [];
+
     // ---
 
     /**
@@ -179,7 +188,7 @@ class ApiDefinition implements ArrayInstantiationInterface
         if (isset($data['baseUriParameters'])) {
             foreach ($data['baseUriParameters'] as $key => $baseUriParameter) {
                 $apiDefinition->addBaseUriParameter(
-                    NamedParameter::createFromArray($key, $baseUriParameter)
+                    BaseUriParameter::createFromArray($key, $baseUriParameter)
                 );
             }
         }
@@ -207,6 +216,16 @@ class ApiDefinition implements ArrayInstantiationInterface
         if (isset($data['securitySchemes'])) {
             foreach ($data['securitySchemes'] as $name => $securityScheme) {
                 $apiDefinition->addSecurityScheme(SecurityScheme::createFromArray($name, $securityScheme));
+            }
+        }
+
+        if (isset($data['securedBy'])) {
+            foreach ($data['securedBy'] as $securedBy) {
+                if ($securedBy) {
+                    $apiDefinition->addSecuredBy($apiDefinition->getSecurityScheme($securedBy));
+                } else {
+                    $apiDefinition->addSecuredBy(SecurityScheme::createFromArray('null', [], $apiDefinition));
+                }
             }
         }
 
@@ -579,7 +598,27 @@ class ApiDefinition implements ArrayInstantiationInterface
     }
 
     /**
-     * All security schemes allowed in api
+     * Get a list of security schemes that the whole API is secured by
+     *
+     * @return SecurityScheme
+     */
+    public function getSecuredBy()
+    {
+        return $this->securedBy;
+    }
+
+    /**
+     * Add an additional security scheme to the list of schemes the whole API is secured by
+     *
+     * @param SecurityScheme $securityScheme
+     */
+    public function addSecuredBy(SecurityScheme $securityScheme)
+    {
+        $this->securedBy[$securityScheme->getKey()] = $securityScheme;
+    }
+
+    /**
+     * List allowed security schemes
      *
      * @return SecurityScheme[]
      */

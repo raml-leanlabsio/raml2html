@@ -69,6 +69,11 @@ class Resource implements ArrayInstantiationInterface
      */
     private $methods = [];
 
+    /**
+     * @var SecurityScheme[]
+     */
+    private $securitySchemes = [];
+
     // ---
 
     /**
@@ -137,7 +142,26 @@ class Resource implements ArrayInstantiationInterface
             }
         }
 
+        if (isset($data['securedBy'])) {
+            foreach ($data['securedBy'] as $key => $securedBy) {
+                if (null !== $securedBy && $apiDefinition->getSecurityScheme($securedBy) instanceof SecurityScheme) {
+                    $resource->addSecurityScheme($apiDefinition->getSecurityScheme($securedBy));
+                } else {
+                    $resource->addSecurityScheme(SecurityScheme::createFromArray('null', array(), $apiDefinition));
+                }
+            }
+        }
+
         foreach ($data as $key => $value) {
+            if (count($resource->getSecuritySchemes()) > 0) {
+                foreach ($resource->getSecuritySchemes() as $securityScheme) {
+                    if ('null' !== $securityScheme->getKey() && $securityScheme instanceOf SecurityScheme) {
+                        if (! isset($value['securedBy']) && is_array($value)) {
+                            $value['securedBy'][] = $securityScheme->getKey();
+                        }
+                    }
+                }
+            }
             if (strpos($key, '/') === 0) {
                 $resource->addResource(
                     Resource::createFromArray(
@@ -355,5 +379,25 @@ class Resource implements ArrayInstantiationInterface
         }
 
         return $this->methods[$method];
+    }
+
+    /**
+     * Security scheme for resources
+     *
+     * @param SecurityScheme $securityScheme
+     */
+    public function addSecurityScheme(SecurityScheme $securityScheme)
+    {
+        $this->securitySchemes[$securityScheme->getKey()] = $securityScheme;
+    }
+
+    /**
+     * Security scheme for all method resources
+     *
+     * @return SecurityScheme[]
+     */
+    private function getSecuritySchemes()
+    {
+        return $this->securitySchemes;
     }
 }

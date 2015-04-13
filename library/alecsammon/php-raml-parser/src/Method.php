@@ -39,6 +39,15 @@ class Method implements ArrayInstantiationInterface
     private $description;
 
     /**
+     * Override for the Base Uri Parameters
+     *
+     * @see http://raml.org/spec.html#base-uri-parameters
+     *
+     * @var NamedParameter[]
+     */
+    private $baseUriParameters = [];
+
+    /**
      * A list of non default headers (optional)
      *
      * @see http://raml.org/spec.html#headers
@@ -174,6 +183,8 @@ class Method implements ArrayInstantiationInterface
             foreach ($data['securedBy'] as $key => $securedBy) {
                 if (null !== $securedBy && $apiDefinition->getSecurityScheme($securedBy) instanceof SecurityScheme) {
                     $method->addSecurityScheme($apiDefinition->getSecurityScheme($securedBy));
+                } else {
+                    $method->addSecurityScheme(SecurityScheme::createFromArray('null', array(), $apiDefinition));
                 }
             }
         }
@@ -211,6 +222,28 @@ class Method implements ArrayInstantiationInterface
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    // --
+
+    /**
+     * Get the base uri parameters
+     *
+     * @return NamedParameter[]
+     */
+    public function getBaseUriParameters()
+    {
+        return $this->baseUriParameters;
+    }
+
+    /**
+     * Add a new base uri parameter
+     *
+     * @param NamedParameter $namedParameter
+     */
+    public function addBaseUriParameter(NamedParameter $namedParameter)
+    {
+        $this->baseUriParameters[$namedParameter->getKey()] = $namedParameter;
     }
 
     // --
@@ -339,6 +372,16 @@ class Method implements ArrayInstantiationInterface
     }
 
     /**
+     * Get an array of all bodies
+     *
+     * @return array The array of bodies
+     */
+    public function getBodies()
+    {
+        return $this->bodyList;
+    }
+
+    /**
      * Add a body
      *
      * @param BodyInterface $body
@@ -413,6 +456,20 @@ class Method implements ArrayInstantiationInterface
 
             foreach ($describedBy->getQueryParameters() as $queryParameter) {
                 $this->addQueryParameter($queryParameter);
+            }
+
+            foreach ($this->getBodies() as $bodyType => $body) {
+                if (in_array($bodyType, array_keys($describedBy->getBodies())) &&
+                    in_array($bodyType, WebFormBody::$validMediaTypes)
+                ) {
+                    $params = $describedBy->getBodyByType($bodyType)->getParameters();
+
+                    foreach ($params as $parameterName => $namedParameter) {
+                        $body->addParameter($namedParameter);
+                    }
+                }
+
+                $this->addBody($body);
             }
 
         }

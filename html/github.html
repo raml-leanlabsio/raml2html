@@ -2356,8 +2356,8 @@ a thread will mute all future notifications (until you comment or get @mentioned
     URl: /gists
     
     <div onclick="show_description('/gists')"><div style="float: right;"><a href="#/gists_desc_GET"><div class="label label-primary">GET
-                                            </div></a><a href="#/gists_desc_POST"><div class="label label-success">POST
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists_desc_POST"><div class="label label-success">POST
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists
         </h4></div><hr/></div><div id="/gists_desc" class="desc_resources" style="
     display: none;
@@ -2373,10 +2373,15 @@ a thread will mute all future notifications (until you comment or get @mentioned
 return all public gists.
 
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
-</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+</div></li><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -2512,12 +2517,17 @@ Only gists updated at or after this time are returned.
     &quot;git_push_url&quot;: &quot;git@gist.github.com:1.git&quot;,
     &quot;created_at&quot;: &quot;2010-04-14T02:15:15Z&quot;
   }
-]</textarea></div></li></ul></div><div class="panel" id="/gists_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /gists
+]</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /gists
             </div><div class="panel-body">
                 Create a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -2793,11 +2803,11 @@ Only gists updated at or after this time are returned.
       &quot;committed_at&quot;: &quot;2010-04-14T02:15:15Z&quot;
     }
   ]
-}</textarea></div></li></ul></div></div><div id="/gists/public">
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/public">
     URl: /gists/public
     
     <div onclick="show_description('/gists/public')"><div style="float: right;"><a href="#/gists/public_desc_GET"><div class="label label-primary">GET
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists public
         </h4></div><hr/></div><div id="/gists/public_desc" class="desc_resources" style="
     display: none;
@@ -2811,10 +2821,15 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 List all public gists.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
-</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+</div></li><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -2950,11 +2965,11 @@ Only gists updated at or after this time are returned.
     &quot;git_push_url&quot;: &quot;git@gist.github.com:1.git&quot;,
     &quot;created_at&quot;: &quot;2010-04-14T02:15:15Z&quot;
   }
-]</textarea></div></li></ul></div></div><div id="/gists/starred">
+]</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/starred">
     URl: /gists/starred
     
     <div onclick="show_description('/gists/starred')"><div style="float: right;"><a href="#/gists/starred_desc_GET"><div class="label label-primary">GET
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists starred
         </h4></div><hr/></div><div id="/gists/starred_desc" class="desc_resources" style="
     display: none;
@@ -2968,10 +2983,15 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 List the authenticated user&#039;s starred gists.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
-</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+</div></li><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -3107,13 +3127,13 @@ Only gists updated at or after this time are returned.
     &quot;git_push_url&quot;: &quot;git@gist.github.com:1.git&quot;,
     &quot;created_at&quot;: &quot;2010-04-14T02:15:15Z&quot;
   }
-]</textarea></div></li></ul></div></div><div id="/gists/{id}">
+]</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/{id}">
     URl: /gists/{id}
     
     <div onclick="show_description('/gists/{id}')"><div style="float: right;"><a href="#/gists/{id}_desc_GET"><div class="label label-primary">GET
-                                            </div></a><a href="#/gists/{id}_desc_PATCH"><div class="label label-info">PATCH
-                                            </div></a><a href="#/gists/{id}_desc_DELETE"><div class="label label-danger">DELETE
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}_desc_PATCH"><div class="label label-info">PATCH
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}_desc_DELETE"><div class="label label-danger">DELETE
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists {id}
         </h4></div><hr/></div><div id="/gists/{id}_desc" class="desc_resources" style="
     display: none;
@@ -3127,8 +3147,13 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 Get a single gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -3404,12 +3429,17 @@ Only gists updated at or after this time are returned.
       &quot;committed_at&quot;: &quot;2010-04-14T02:15:15Z&quot;
     }
   ]
-}</textarea></div></li></ul></div><div class="panel" id="/gists/{id}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /gists/{id}
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /gists/{id}
             </div><div class="panel-body">
                 Edit a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -3685,18 +3715,23 @@ Only gists updated at or after this time are returned.
       &quot;committed_at&quot;: &quot;2010-04-14T02:15:15Z&quot;
     }
   ]
-}</textarea></div></li></ul></div><div class="panel" id="/gists/{id}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}
             </div><div class="panel-body">
                 Delete a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="/gists/{id}/star">
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/{id}/star">
     URl: /gists/{id}/star
     
     <div onclick="show_description('/gists/{id}/star')"><div style="float: right;"><a href="#/gists/{id}/star_desc_PUT"><div class="label label-warning">PUT
-                                            </div></a><a href="#/gists/{id}/star_desc_DELETE"><div class="label label-danger">DELETE
-                                            </div></a><a href="#/gists/{id}/star_desc_GET"><div class="label label-primary">GET
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}/star_desc_DELETE"><div class="label label-danger">DELETE
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}/star_desc_GET"><div class="label label-primary">GET
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists {id} star
         </h4></div><hr/></div><div id="/gists/{id}/star_desc" class="desc_resources" style="
     display: none;
@@ -3710,22 +3745,37 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 Star a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Starred.</div></li></ul></div><div class="panel" id="/gists/{id}/star_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}/star
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Starred.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}/star_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}/star
             </div><div class="panel-body">
                 Unstar a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div><div class="panel" id="/gists/{id}/star_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /gists/{id}/star
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}/star_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /gists/{id}/star
             </div><div class="panel-body">
                 Check if a gist is starred.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Not exists.</div></li></ul></div></div><div id="/gists/{id}/forks">
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/{id}/forks">
     URl: /gists/{id}/forks
     
     <div onclick="show_description('/gists/{id}/forks')"><div style="float: right;"><a href="#/gists/{id}/forks_desc_POST"><div class="label label-success">POST
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists {id} forks
         </h4></div><hr/></div><div id="/gists/{id}/forks_desc" class="desc_resources" style="
     display: none;
@@ -3739,13 +3789,18 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 Fork a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Not exists.</div></li></ul></div></div><div id="/gists/{id}/comments">
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/{id}/comments">
     URl: /gists/{id}/comments
     
     <div onclick="show_description('/gists/{id}/comments')"><div style="float: right;"><a href="#/gists/{id}/comments_desc_GET"><div class="label label-primary">GET
-                                            </div></a><a href="#/gists/{id}/comments_desc_POST"><div class="label label-success">POST
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}/comments_desc_POST"><div class="label label-success">POST
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists {id} comments
         </h4></div><hr/></div><div id="/gists/{id}/comments_desc" class="desc_resources" style="
     display: none;
@@ -3759,8 +3814,13 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 List comments on a gist.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -3834,12 +3894,17 @@ Only gists updated at or after this time are returned.
     },
     &quot;created_at&quot;: &quot;2011-04-18T23:23:56Z&quot;
   }
-]</textarea></div></li></ul></div><div class="panel" id="/gists/{id}/comments_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /gists/{id}/comments
+]</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}/comments_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /gists/{id}/comments
             </div><div class="panel-body">
                 Create a comment
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -3904,13 +3969,13 @@ Only gists updated at or after this time are returned.
     &quot;url&quot;: &quot;https://api.github.com/users/octocat&quot;
   },
   &quot;created_at&quot;: &quot;2011-04-18T23:23:56Z&quot;
-}</textarea></div></li></ul></div></div><div id="/gists/{id}/comments/{commentId}">
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/gists/{id}/comments/{commentId}">
     URl: /gists/{id}/comments/{commentId}
     
     <div onclick="show_description('/gists/{id}/comments/{commentId}')"><div style="float: right;"><a href="#/gists/{id}/comments/{commentId}_desc_GET"><div class="label label-primary">GET
-                                            </div></a><a href="#/gists/{id}/comments/{commentId}_desc_PATCH"><div class="label label-info">PATCH
-                                            </div></a><a href="#/gists/{id}/comments/{commentId}_desc_DELETE"><div class="label label-danger">DELETE
-                                            </div></a></div><h4 style="cursor: pointer;">
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}/comments/{commentId}_desc_PATCH"><div class="label label-info">PATCH
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#/gists/{id}/comments/{commentId}_desc_DELETE"><div class="label label-danger">DELETE
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 style="cursor: pointer;">
              gists {id} comments {commentId}
         </h4></div><hr/></div><div id="/gists/{id}/comments/{commentId}_desc" class="desc_resources" style="
     display: none;
@@ -3924,8 +3989,13 @@ Only gists updated at or after this time are returned.
             </div><div class="panel-body">
                 Get a single comment.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -3990,12 +4060,17 @@ Only gists updated at or after this time are returned.
     &quot;url&quot;: &quot;https://api.github.com/users/octocat&quot;
   },
   &quot;created_at&quot;: &quot;2011-04-18T23:23:56Z&quot;
-}</textarea></div></li></ul></div><div class="panel" id="/gists/{id}/comments/{commentId}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /gists/{id}/comments/{commentId}
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}/comments/{commentId}_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /gists/{id}/comments/{commentId}
             </div><div class="panel-body">
                 Edit a comment.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -4060,12 +4135,17 @@ Only gists updated at or after this time are returned.
     &quot;url&quot;: &quot;https://api.github.com/users/octocat&quot;
   },
   &quot;created_at&quot;: &quot;2011-04-18T23:23:56Z&quot;
-}</textarea></div></li></ul></div><div class="panel" id="/gists/{id}/comments/{commentId}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}/comments/{commentId}
+}</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="/gists/{id}/comments/{commentId}_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}/comments/{commentId}
             </div><div class="panel-body">
                 Delete a comment.
 
-                
-                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="/orgs/{orgId}">
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="/orgs/{orgId}">
     URl: /orgs/{orgId}
     
     <div onclick="show_description('/orgs/{orgId}')"><div style="float: right;"><a href="#/orgs/{orgId}_desc_GET"><div class="label label-primary">GET
@@ -5733,7 +5813,8 @@ Note: Pagination is powered exclusively by the since parameter. is the
 Link header to get the URL for the next page of repositories.
 
 
-                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('null')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by null
+                        </div><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
                         </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: The integer ID of the last Repository that you&#039;ve seen.</div></li><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
@@ -21742,6 +21823,7 @@ individual commits.
                 Get a single user.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><div class="alert alert-warning" onclick="show_description('null')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by null
                         </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
@@ -24873,7 +24955,8 @@ Lists the verified public keys for a user. This is accessible by anyone.
             </div><div class="panel-body">
                 List a user&#039;s gists.
 
-                                    <br/><br/><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('null')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by null
+                        </div><div class="alert alert-warning" onclick="show_description('oauth_2_0')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
                         </div><h4 style="margin-bottom: 25px;">Request</h4><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">since</span>: Timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.
 Only gists updated at or after this time are returned.
 </div></li><li><div><span style="font-weight: bold;">access_token</span>: Used to send a valid OAuth 2 access token. Do not use together with
