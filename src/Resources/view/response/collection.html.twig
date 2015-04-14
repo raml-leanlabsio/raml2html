@@ -29,17 +29,17 @@
             </li>
             <li class="list-group-item">
                 {% set body = response.getBodyByType(response_type) %}
+                {% if body.example %}
+                    <h6>Example</h6>
+                    <div style="margin-left: -15px;
+                            margin-right: -15px;">
+                        <textarea class="code">{{ file_loader(base_dir_raml, body.example) }}</textarea></div>
+                {% endif %}
                 {% if body.schema %}
                     <h6>Schema</h6>
                     <div style="margin-left: -15px;
                              margin-right: -15px;">
                         <textarea class="code">{{ body.schema|readable_json }}</textarea></div>
-                {% endif %}
-                {% if body.example %}
-                    <h6>Example</h6>
-                    <div style="margin-left: -15px;
-                             margin-right: -15px;">
-                        <textarea class="code">{{ file_loader(base_dir_raml, body.example) }}</textarea></div>
                 {% endif %}
             </li>
         {% endfor %}
