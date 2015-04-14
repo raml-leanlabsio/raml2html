@@ -9,11 +9,14 @@
 <div id="{{ resource.uri|md5 }}">
     URl: {{ resource.uri }}
     {{ resource.description }}
-    <div onclick="show_description('{{ resource.uri|md5 }}')">
-        <div style="float: right;">
+    <div onclick="show_description('{{ resource.uri|md5 }}')" style="position: relative; margin-top: 20px;">
+        <div style="float: right;
+                    position: absolute;
+                    top: -20px;
+                    right: -2px;">
             {% for method in resource.methods %}
                 <a href="#{{ resource.uri|md5 }}_desc_{{ method.type }}">
-                    <div class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}
+                    <div style="border-radius: 0;" class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}
                         {% if method.getSecuritySchemes()|length > 0 %}
                             <i class="glyphicon glyphicon-lock"></i>
                         {% endif %}
