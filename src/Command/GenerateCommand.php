@@ -65,6 +65,8 @@ class GenerateCommand extends Command
                      .PHP_EOL.'file://'.realpath($outputFile).PHP_EOL;
         } catch (\Exception $e) {
             $text = '<error>'.$e->getMessage().'</error>';
+            $text .= $e->getFile().' '.$e->getLine();
+            $text .= $e->getTraceAsString();
         }
 
         $output->writeln($text);
