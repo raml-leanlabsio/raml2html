@@ -4,20 +4,65 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "934fecbd5c449ec8f8a7345204d68901",
+    "hash": "c631088396f675bfe6a817911d594dc4",
     "packages": [
         {
-            "name": "justinrainbow/json-schema",
-            "version": "dev-master",
+            "name": "cnam/php-raml-parser",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "1235d2e2100545e775512f9c88cbb0b680245a24"
+                "url": "https://github.com/cnam/php-raml-parser.git",
+                "reference": "3f25311773b8035942190626109458e715faf9ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/1235d2e2100545e775512f9c88cbb0b680245a24",
-                "reference": "1235d2e2100545e775512f9c88cbb0b680245a24",
+                "url": "https://api.github.com/repos/cnam/php-raml-parser/zipball/3f25311773b8035942190626109458e715faf9ff",
+                "reference": "3f25311773b8035942190626109458e715faf9ff",
+                "shasum": ""
+            },
+            "require": {
+                "justinrainbow/json-schema": "1.4.1",
+                "oodle/inflect": "0.2.0",
+                "symfony/routing": "~2.5",
+                "symfony/yaml": "~2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Raml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alec Sammon",
+                    "email": "alec.sammon@googlemail.com"
+                }
+            ],
+            "description": "A RAML parser built in php",
+            "homepage": "https://github.com/alecsammon/php-raml-parser",
+            "time": "2015-04-14 09:39:07"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "2465fe486c864e30badaa4d005ebdf89dbc503f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2465fe486c864e30badaa4d005ebdf89dbc503f3",
+                "reference": "2465fe486c864e30badaa4d005ebdf89dbc503f3",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +115,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2015-03-31 16:01:45"
+            "time": "2015-03-27 16:41:39"
         },
         {
             "name": "oodle/inflect",
@@ -360,10 +405,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "justinrainbow/json-schema": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }

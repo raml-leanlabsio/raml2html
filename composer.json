@@ -1,6 +1,7 @@
 {
   "name": "cnam/raml2html",
-  "description": "Raml to html creator",
+  "description": "php Raml to html documentation generator",
+  "tags": ["raml", "raml2html", "documentation generator"],
   "minimum-stability": "stable",
   "authors": [
     {
@@ -10,16 +11,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Cnam\\": "src/",
-      "Raml\\": "library/alecsammon/php-raml-parser/src/"
+      "Cnam\\": "src/"
     }
   },
   "require": {
-    "justinrainbow/json-schema": "@dev",
-    "symfony/yaml": "~2.5",
-    "symfony/routing": "~2.5",
-    "oodle/inflect": "0.2.0",
     "twig/twig": "1.18.0",
-    "symfony/console": "2.6.6"
+    "symfony/console": "2.6.6",
+    "cnam/php-raml-parser": "1.0.2"
   }
 }
