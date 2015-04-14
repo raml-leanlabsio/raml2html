@@ -13,7 +13,7 @@
         <div style="float: right;
                     position: absolute;
                     top: -20px;
-                    right: -2px;">
+                    right: -1px;">
             {% for method in resource.methods %}
                 <a href="#{{ resource.uri|md5 }}_desc_{{ method.type }}">
                     <div style="border-radius: 0;" class="label label-{{ methodsStyles[method.type] }}">{{ method.type }}
@@ -24,7 +24,7 @@
                 </a>
             {% endfor %}
         </div>
-        <h4 style="cursor: pointer;">
+        <h4 class="link">
             {{ resource.getDisplayName()|generate_name }}
         </h4>
     </div>
