@@ -1,15 +1,17 @@
+#!/usr/bin/php -q
+
 <?php
 
 require __DIR__.'/vendor/autoload.php';
 
-$generator = new Cnam\Generator();
+use Symfony\Component\Console\Application;
 
-$generator->parse(__DIR__.'/example/twitter/api.raml');
-$generator->generate(__DIR__.'/example/twitter.html');
+$command = new \Cnam\Command\GenerateCommand();
+$watch = new \Cnam\Command\WatchCommand();
 
+$application = new Application('raml2html', '0.0.1');
 
-$generator->parse(__DIR__.'/example/github/api.raml');
-$generator->generate(__DIR__.'/example/github.html');
-
-$generator->parse(__DIR__.'/example/api.raml');
-$generator->generate(__DIR__.'/example/index.html');
+$application->add($command);
+$application->add($watch);
+$application->setDefaultCommand($command->getName());
+$application->run();

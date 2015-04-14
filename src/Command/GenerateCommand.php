@@ -11,6 +11,7 @@ namespace Cnam\Command;
 
 use Cnam\Generator;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\DescriptorHelper;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -22,44 +23,59 @@ class GenerateCommand extends Command
     {
         $this
             ->setName('generate')
-            ->setDescription('Generator html documentation from raml file')
-            ->addArgument(
+            ->setDescription('<info>Generator html documentation from raml file<info>')
+            ->addOption(
                 'input',
-                null,
-                'Input file *.raml'
+                'i',
+                InputOption::VALUE_REQUIRED,
+                'You need to specify the RAML input file'
             )
-            ->addArgument(
+            ->addOption(
                 'output',
-                null,
-                'Output file *.raml'
+                'o',
+                InputOption::VALUE_REQUIRED,
+                'You need to specify the Html Output file'
             );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $inputFile = $input->getArgument('input');
-        $outputFile = $input->getArgument('output');
+        $inputFile = $input->getOption('input');
+        $inputFileReal = realpath($inputFile);
+        $outputFile = $input->getOption('output');
 
         $generator = new Generator();
 
-        if (!file_exists($inputFile)) {
-            $output->writeln('<error>Input file require not exists<error>', OutputInterface::VERBOSITY_QUIET);
+        if (empty($inputFile) || ! file_exists($inputFileReal)) {
+            $output->writeln('<error>Error: You need to specify the RAML input file</error>'.PHP_EOL, OutputInterface::VERBOSITY_QUIET);
+            $this->viewHelp($input, $output);
             return;
         }
 
         if (empty($outputFile)) {
-            $output->writeln('<error>Output file cannot be empty<error>', OutputInterface::VERBOSITY_QUIET);
+            $output->writeln('<error>Output file cannot be empty</error>'.PHP_EOL, OutputInterface::VERBOSITY_QUIET);
+            $this->viewHelp($input, $output);
             return;
         }
 
         try {
-            $generator->parse(realpath($inputFile));
+            $generator->parse($inputFileReal);
             $generator->generate($outputFile);
-            $text = '<info>api generate success for run copy text file://'.realpath($outputFile).'<info>';
+            $text = '<info>api generate success for run copy text</info>'
+                     .PHP_EOL.'file://'.realpath($outputFile).PHP_EOL;
         } catch (\Exception $e) {
-            $text = '<error>'.$e->getMessage().'<error>';
+            $text = '<error>'.$e->getMessage().'</error>';
         }
 
         $output->writeln($text);
+    }
+
+    protected function viewHelp(InputInterface $input, OutputInterface $output)
+    {
+        $helper = new DescriptorHelper();
+        $helper->describe($output, $this, array(
+            'raw_text' => false,
+            'format' => 'txt',
+        ));
     }
 }
