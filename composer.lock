@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c631088396f675bfe6a817911d594dc4",
+    "hash": "d0c6261141ec9b0a5904fe3a526e0959",
     "packages": [
         {
             "name": "cnam/php-raml-parser",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cnam/php-raml-parser.git",
-                "reference": "3f25311773b8035942190626109458e715faf9ff"
+                "reference": "352d937839817e16b3cff13c948fabda5eeba7ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cnam/php-raml-parser/zipball/3f25311773b8035942190626109458e715faf9ff",
-                "reference": "3f25311773b8035942190626109458e715faf9ff",
+                "url": "https://api.github.com/repos/cnam/php-raml-parser/zipball/352d937839817e16b3cff13c948fabda5eeba7ce",
+                "reference": "352d937839817e16b3cff13c948fabda5eeba7ce",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
             ],
             "description": "A RAML parser built in php",
             "homepage": "https://github.com/alecsammon/php-raml-parser",
-            "time": "2015-04-14 09:39:07"
+            "time": "2015-04-14 16:08:20"
         },
         {
             "name": "justinrainbow/json-schema",
