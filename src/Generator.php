@@ -65,8 +65,9 @@ class Generator
             'base_url'  => $this->specification->getBaseUrl(),
             'security'  => $this->specification->getSecuritySchemes(),
             'resources' => $this->specification->getResources(),
-            'documentation' => array_pop($this->specification->getDocumentationList()),
+            'documentation' => $this->specification->getDocumentationList(),
             'base_dir_raml' => $this->base_dir_raml,
+            'version' => $this->specification->getVersion()
         ));
 
         file_put_contents($output, $html);

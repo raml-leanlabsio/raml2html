@@ -6,7 +6,7 @@ baseUri: https://api.github.com/
 securitySchemes:
 mediaType: application/json
 securitySchemes:
-  oauth_2_0:
+  - oauth_2_0:
       description: |
         OAuth2 is a protocol that lets external apps request authorization to private
         details in a user's GitHub account without getting their password. This is
@@ -43,7 +43,6 @@ securitySchemes:
           - "delete_repo"
           - "notifications"
           - "gist"
-mediaType: application/json
 resourceTypes:
   - base:
       get?: &common

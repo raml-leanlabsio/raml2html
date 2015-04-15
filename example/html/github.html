@@ -1,9 +1,4 @@
-<!doctype html>
-<html data-ng-app="gitlabKBApp">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub API</title>
-    <style type="text/css">
+<!doctype html><html data-ng-app="gitlabKBApp"><head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>GitHub API</title><style type="text/css">
         style > body,
 h4,
 h5 {
@@ -168,8 +163,7 @@ textarea.code{
     width: 100%;
     height: 300px;
 }
-    </style>
-    <style type="text/css">
+    </style><style type="text/css">
         /* Syntax Highlighter Styles */
 .pln
 {
@@ -274,12 +268,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9
     font-family: 'Anonymous Pro', sans-serif;
     font-size: 12px;
 }
-    </style>
-    <link type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<div class="container-fluid"><div class="row"><div class="col-md-2"><nav id="nav" class="hidden-sm hidden-xs affix nav"><div><a class="list-group-item collapsed" href="#security">Security</a></div><div><a class="list-group-item collapsed" href="#18fc53a52a033fe75f7d0542124ca8c0"> search</a></div><div><a class="list-group-item collapsed" href="#c468958590b5fb14d45faa0c9c2ebc68"> events</a></div><div><a class="list-group-item collapsed" href="#e7c454974606ae9c472479774dc9a392"> feeds</a></div><div><a class="list-group-item collapsed" href="#2f839601009aa63e83121a533a314010"> meta</a></div><div><a class="list-group-item collapsed" href="#cd5e492779e656e852127f71198b0fb2"> rate_limit</a></div><div><a class="list-group-item collapsed" href="#ca7128d9457900085a8a2a288af21596"> issues</a></div><div><a class="list-group-item collapsed" href="#108411b235986982c5b22444f1f16d01"> notifications</a></div><div><a class="list-group-item collapsed" href="#20eb3d8185725c83ed8164f865528e57"> gists</a></div><div><a class="list-group-item collapsed" href="#f08eb6d7cfdc54865f76918792adfa06"> orgs {orgId}</a></div><div><a class="list-group-item collapsed" href="#d79b0f3b03d49825c55a72963ef44e16"> teams {teamsId}</a></div><div><a class="list-group-item collapsed" href="#e17ce4f86c78707970c6d8b94844120f"> repositories</a></div><div><a class="list-group-item collapsed" href="#a023ce7d24d72ac2db4fca86f8dba3b4"> repos {ownerId} {repoId}</a></div><div><a class="list-group-item collapsed" href="#810735b9b4ba8e1cc277a5cbe9f4d80a"> user</a></div><div><a class="list-group-item collapsed" href="#06bdcf95aafda840b1d04322636de293"> users</a></div><div><a class="list-group-item collapsed" href="#d0cdfaf2919580cbe8013dfc42837c81"> gitignore templates</a></div><div><a class="list-group-item collapsed" href="#34a8920b4ae16f49c1b5a4cbc80e3f83"> markdown</a></div><div><a class="list-group-item collapsed" href="#50d93e87529d463c27e983d40b0067a2"> networks {ownerId} {repoId} events</a></div></nav></div><div class="col-md-4" style="position: initial;"><h2>GitHub API</h2><h3></h3><p><strong>Base url</strong> https://api.github.com/</p><p></p><div id="security"><hr/><h3>Security</h3><br/><div id="5aa9ae81f3346a6be7bbd62f7db12dda"><h4 onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')" style="cursor: pointer">oauth_2_0</h4><div>
+    </style><link type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" /><link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css'></head><body><div class="container-fluid"><div class="row"><div class="col-md-2"><nav id="nav" class="hidden-sm hidden-xs affix nav"><div><a class="list-group-item collapsed" href="#security">Security</a></div><div><a class="list-group-item collapsed" href="#18fc53a52a033fe75f7d0542124ca8c0"> search</a></div><div><a class="list-group-item collapsed" href="#c468958590b5fb14d45faa0c9c2ebc68"> events</a></div><div><a class="list-group-item collapsed" href="#e7c454974606ae9c472479774dc9a392"> feeds</a></div><div><a class="list-group-item collapsed" href="#2f839601009aa63e83121a533a314010"> meta</a></div><div><a class="list-group-item collapsed" href="#cd5e492779e656e852127f71198b0fb2"> rate_limit</a></div><div><a class="list-group-item collapsed" href="#ca7128d9457900085a8a2a288af21596"> issues</a></div><div><a class="list-group-item collapsed" href="#108411b235986982c5b22444f1f16d01"> notifications</a></div><div><a class="list-group-item collapsed" href="#20eb3d8185725c83ed8164f865528e57"> gists</a></div><div><a class="list-group-item collapsed" href="#f08eb6d7cfdc54865f76918792adfa06"> orgs {orgId}</a></div><div><a class="list-group-item collapsed" href="#d79b0f3b03d49825c55a72963ef44e16"> teams {teamsId}</a></div><div><a class="list-group-item collapsed" href="#e17ce4f86c78707970c6d8b94844120f"> repositories</a></div><div><a class="list-group-item collapsed" href="#a023ce7d24d72ac2db4fca86f8dba3b4"> repos {ownerId} {repoId}</a></div><div><a class="list-group-item collapsed" href="#810735b9b4ba8e1cc277a5cbe9f4d80a"> user</a></div><div><a class="list-group-item collapsed" href="#06bdcf95aafda840b1d04322636de293"> users</a></div><div><a class="list-group-item collapsed" href="#d0cdfaf2919580cbe8013dfc42837c81"> gitignore templates</a></div><div><a class="list-group-item collapsed" href="#34a8920b4ae16f49c1b5a4cbc80e3f83"> markdown</a></div><div><a class="list-group-item collapsed" href="#50d93e87529d463c27e983d40b0067a2"> networks {ownerId} {repoId} events</a></div></nav></div><div class="col-md-4" style="position: initial;"><h2>GitHub API</h2><p><strong>Base url</strong> https://api.github.com/</p><br/><p>Version v3</p><div id="security"><hr/><h3>Security</h3><br/><div id="5aa9ae81f3346a6be7bbd62f7db12dda"><h4 onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')" style="cursor: pointer">oauth_2_0</h4><div>
                 OAuth2 is a protocol that lets external apps request authorization to private
 details in a user&#039;s GitHub account without getting their password. This is
 preferred over Basic Authentication because tokens can be limited to specific
@@ -2381,7 +2370,7 @@ a thread will mute all future notifications (until you comment or get @mentioned
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="20eb3d8185725c83ed8164f865528e57">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="20eb3d8185725c83ed8164f865528e57">
     URl: /gists
     
     <div onclick="show_description('20eb3d8185725c83ed8164f865528e57')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -3766,15 +3755,15 @@ the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
 
-                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="fda99e85b58a4e329d43fe7eac28b005">
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="fda99e85b58a4e329d43fe7eac28b005">
     URl: /gists/{id}/star
     
     <div onclick="show_description('fda99e85b58a4e329d43fe7eac28b005')" style="position: relative; margin-top: 25px;"><div style="float: right;
                     position: absolute;
                     top: -20px;
-                    right: -1px;"><a href="#fda99e85b58a4e329d43fe7eac28b005_desc_PUT"><div style="border-radius: 0;" class="label label-warning">PUT
+                    right: -1px;"><a href="#fda99e85b58a4e329d43fe7eac28b005_desc_GET"><div style="border-radius: 0;" class="label label-primary">GET
+                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#fda99e85b58a4e329d43fe7eac28b005_desc_PUT"><div style="border-radius: 0;" class="label label-warning">PUT
                                                     <i class="glyphicon glyphicon-lock"></i></div></a><a href="#fda99e85b58a4e329d43fe7eac28b005_desc_DELETE"><div style="border-radius: 0;" class="label label-danger">DELETE
-                                                    <i class="glyphicon glyphicon-lock"></i></div></a><a href="#fda99e85b58a4e329d43fe7eac28b005_desc_GET"><div style="border-radius: 0;" class="label label-primary">GET
                                                     <i class="glyphicon glyphicon-lock"></i></div></a></div><h4 class="link">
              gists {id} star
         </h4></div><hr/></div><div id="fda99e85b58a4e329d43fe7eac28b005_desc" class="desc_resources" style="
@@ -3785,37 +3774,61 @@ the &quot;access_token&quot; query string parameter.
     right: 0; top: 0;
     overflow: auto;
     background-color: #ccc;
-    padding: 10px;"><div class="panel" id="fda99e85b58a4e329d43fe7eac28b005_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /gists/{id}/star
-            </div><div class="panel-body"><strong>Description</strong><br/><br/>
-                Star a gist.
-
-                                    <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
-the &quot;Authorization&quot; header
-</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
-the &quot;access_token&quot; query string parameter.
-
-                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Starred.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="fda99e85b58a4e329d43fe7eac28b005_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}/star
-            </div><div class="panel-body"><strong>Description</strong><br/><br/>
-                Unstar a gist.
-
-                                    <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
-the &quot;Authorization&quot; header
-</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
-the &quot;access_token&quot; query string parameter.
-
-                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="fda99e85b58a4e329d43fe7eac28b005_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /gists/{id}/star
+    padding: 10px;"><div class="panel" id="fda99e85b58a4e329d43fe7eac28b005_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /gists/{id}/star
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Check if a gist is starred.
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
                         </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
-</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
 
-                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="05fce00747c045e08a1d2987606b9ac5">
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="fda99e85b58a4e329d43fe7eac28b005_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /gists/{id}/star
+            </div><div class="panel-body"><strong>Description</strong><br/><br/>
+                Star a gist.
+
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Starred.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div><div class="panel" id="fda99e85b58a4e329d43fe7eac28b005_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /gists/{id}/star
+            </div><div class="panel-body"><strong>Description</strong><br/><br/>
+                Unstar a gist.
+
+                                    <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
+                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;Authorization&quot; header
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+the &quot;access_token&quot; query string parameter.
+
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="05fce00747c045e08a1d2987606b9ac5">
     URl: /gists/{id}/forks
     
     <div onclick="show_description('05fce00747c045e08a1d2987606b9ac5')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -3839,10 +3852,18 @@ the &quot;access_token&quot; query string parameter.
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_2_0
                         </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">id</span> (integer)<br/> Id of a thread.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
-</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
+</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
 
-                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="90f021b4f369caca718420795d910d07">
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Exists.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="90f021b4f369caca718420795d910d07">
     URl: /gists/{id}/comments
     
     <div onclick="show_description('90f021b4f369caca718420795d910d07')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -4198,7 +4219,7 @@ the &quot;Authorization&quot; header
 </div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;access_token&quot; query string parameter.
 
-                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="f08eb6d7cfdc54865f76918792adfa06">
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Unauthorized</div></li></ul></div></div><div id="f08eb6d7cfdc54865f76918792adfa06">
     URl: /orgs/{orgId}
     
     <div onclick="show_description('f08eb6d7cfdc54865f76918792adfa06')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -4994,7 +5015,7 @@ will no longer have any access to the organization&#039;s repositories.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="f71c315a50ad5360bb2d7e8de0b0704d">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="f71c315a50ad5360bb2d7e8de0b0704d">
     URl: /orgs/{orgId}/public_members
     
     <div onclick="show_description('f71c315a50ad5360bb2d7e8de0b0704d')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -5089,19 +5110,43 @@ or not.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a public member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a public member.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /orgs/{orgId}/public_members/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a public member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a public member.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /orgs/{orgId}/public_members/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Publicize a user&#039;s membership.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Publicized.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /orgs/{orgId}/public_members/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Publicized.</div></li></ul></div><div class="panel" id="8160439659743bcede972508c0fa37bf_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /orgs/{orgId}/public_members/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Conceal a user&#039;s membership.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Concealed.</div></li></ul></div></div><div id="158b0a6af965e2e1db7fec43f54b63bc">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of the user.</div></li><li><div><span style="font-weight: bold;">orgId</span> (integer)<br/> Id of organisation.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Concealed.</div></li></ul></div></div><div id="158b0a6af965e2e1db7fec43f54b63bc">
     URl: /orgs/{orgId}/teams
     
     <div onclick="show_description('158b0a6af965e2e1db7fec43f54b63bc')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -5736,7 +5781,7 @@ org that the team is associated with.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="4001bbc26e91e8ecdaebfa8d629c0763">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="4001bbc26e91e8ecdaebfa8d629c0763">
     URl: /teams/{teamsId}/members
     
     <div onclick="show_description('4001bbc26e91e8ecdaebfa8d629c0763')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -5834,7 +5879,15 @@ be a member of the team.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a member.</div></li></ul></div><div class="panel" id="64aded46116ea6613224800c18d34b67_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /teams/{teamsId}/members/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a member.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a member.</div></li></ul></div><div class="panel" id="64aded46116ea6613224800c18d34b67_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /teams/{teamsId}/members/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Add team member.
 In order to add a user to a team, the authenticated user must have &#039;admin&#039;
@@ -5844,7 +5897,15 @@ with.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member added.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">422</div></h5><div>If you attempt to add an organization to a team, you will get this.</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member added.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">422</div></h5><div>If you attempt to add an organization to a team, you will get this.</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;message&quot;: &quot;Validation Failed&quot;,
@@ -5900,7 +5961,15 @@ NOTE This does not delete the user, it just remove them from the team.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member removed.</div></li></ul></div></div><div id="e17ce4f86c78707970c6d8b94844120f">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/> Id of a member.</div></li><li><div><span style="font-weight: bold;">teamsId</span> (integer)<br/> Id of a team.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Team member removed.</div></li></ul></div></div><div id="e17ce4f86c78707970c6d8b94844120f">
     URl: /repositories
     
     <div onclick="show_description('e17ce4f86c78707970c6d8b94844120f')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -7233,7 +7302,7 @@ scope is required.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="adfa149a1c7618b48d293eedf6a6cc7e">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="adfa149a1c7618b48d293eedf6a6cc7e">
     URl: /repos/{ownerId}/{repoId}/events
     
     <div onclick="show_description('adfa149a1c7618b48d293eedf6a6cc7e')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -8125,7 +8194,7 @@ base64 encode it.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li><li><div><span style="font-weight: bold;">heads</span> (string)<br/> Subfolder of path to the branch.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="2964c5f992f32ffc311ed6f916daa127">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">branch</span> (string)<br/> Path to the branch.</div></li><li><div><span style="font-weight: bold;">heads</span> (string)<br/> Subfolder of path to the branch.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="2964c5f992f32ffc311ed6f916daa127">
     URl: /repos/{ownerId}/{repoId}/git/tags
     
     <div onclick="show_description('2964c5f992f32ffc311ed6f916daa127')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -12080,7 +12149,15 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the issue.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="bbdec2672868c725fe0e28f321d6d457">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the issue.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="bbdec2672868c725fe0e28f321d6d457">
     URl: /repos/{ownerId}/{repoId}/issues/comments
     
     <div onclick="show_description('bbdec2672868c725fe0e28f321d6d457')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -12438,7 +12515,7 @@ Sending an empty array ([]) will remove all Labels from the Issue.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="12f21aecec397d13350a8d075b029d7c">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of the comment.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="12f21aecec397d13350a8d075b029d7c">
     URl: /repos/{ownerId}/{repoId}/notifications
     
     <div onclick="show_description('12f21aecec397d13350a8d075b029d7c')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -12853,7 +12930,15 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">assignee</span> (string)<br/> Login of the assignee.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is an assignee.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User isn&#039;t an assignee.</div></li></ul></div></div><div id="edc53128ef8f395b4ce82fc7c2c58ac2">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">assignee</span> (string)<br/> Login of the assignee.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is an assignee.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User isn&#039;t an assignee.</div></li></ul></div></div><div id="edc53128ef8f395b4ce82fc7c2c58ac2">
     URl: /repos/{ownerId}/{repoId}/labels
     
     <div onclick="show_description('edc53128ef8f395b4ce82fc7c2c58ac2')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -13037,7 +13122,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="8832eee23e642f4912b6ec9e7676b26f">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">name</span> (string)<br/> Name of the label.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="8832eee23e642f4912b6ec9e7676b26f">
     URl: /repos/{ownerId}/{repoId}/milestones
     
     <div onclick="show_description('8832eee23e642f4912b6ec9e7676b26f')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -13484,7 +13569,7 @@ You may also check to see if a particular user is an assignee for a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="c4b1ecf11a49170980ea10134796a88a">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the milestone.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="c4b1ecf11a49170980ea10134796a88a">
     URl: /repos/{ownerId}/{repoId}/milestones/{number}/labels
     
     <div onclick="show_description('c4b1ecf11a49170980ea10134796a88a')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -17111,13 +17196,29 @@ Example: github:new-script-format.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Pull request has been merged.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Pull request has not been merged.</div></li></ul></div><div class="panel" id="6876ebf7f1c7a690fce54407fad91da3_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /repos/{ownerId}/{repoId}/pulls/{number}/merge
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Pull request has been merged.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Pull request has not been merged.</div></li></ul></div><div class="panel" id="6876ebf7f1c7a690fce54407fad91da3_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /repos/{ownerId}/{repoId}/pulls/{number}/merge
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Merge a pull request (Merge Button™)
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div>Response if merge was successful.</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of a pull.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div>Response if merge was successful.</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;sha&quot;: &quot;6dcb09b5b57875f334f61aebed695e2e4193db5e&quot;,
@@ -17963,7 +18064,7 @@ By default, Review Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="73859b8580bff1e44274ec365b431fa4">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">number</span> (integer)<br/> Id of the comment.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="73859b8580bff1e44274ec365b431fa4">
     URl: /repos/{ownerId}/{repoId}/collaborators
     
     <div onclick="show_description('73859b8580bff1e44274ec365b431fa4')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -18060,19 +18161,43 @@ returned in the collaborators list.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a collaborator.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a collaborator.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /repos/{ownerId}/{repoId}/collaborators/{user}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User is a collaborator.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>User is not a collaborator.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /repos/{ownerId}/{repoId}/collaborators/{user}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Add collaborator.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator added.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /repos/{ownerId}/{repoId}/collaborators/{user}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator added.</div></li></ul></div><div class="panel" id="8a46281f8511676d45803e647e74541f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /repos/{ownerId}/{repoId}/collaborators/{user}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Remove collaborator.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator removed.</div></li></ul></div></div><div id="d1ffbb0c00eece20b8570edc602752e1">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">user</span> (string)<br/> Login of the user.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Collaborator removed.</div></li></ul></div></div><div id="d1ffbb0c00eece20b8570edc602752e1">
     URl: /repos/{ownerId}/{repoId}/comments
     
     <div onclick="show_description('d1ffbb0c00eece20b8570edc602752e1')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -18431,7 +18556,7 @@ Comments are ordered by ascending ID.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="063fb6aab03990f625d868a7612c9196">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">commentId</span> (integer)<br/> Id of a comment.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="063fb6aab03990f625d868a7612c9196">
     URl: /repos/{ownerId}/{repoId}/commits
     
     <div onclick="show_description('063fb6aab03990f625d868a7612c9196')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -19167,7 +19292,15 @@ Here can be many outcomes. For details see &quot;http://developer.github.com/v3/
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/> The content path.</div></li><li><div><span style="font-weight: bold;">ref</span> (string)<br/> The String name of the Commit/Branch/Tag. Defaults to &#039;master&#039;.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/> The content path.</div></li><li><div><span style="font-weight: bold;">ref</span> (string)<br/> The String name of the Commit/Branch/Tag. Defaults to &#039;master&#039;.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;type&quot;: &quot;file&quot;,
@@ -19257,7 +19390,15 @@ Here can be many outcomes. For details see &quot;http://developer.github.com/v3/
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;content&quot;: {
@@ -19383,7 +19524,15 @@ This method deletes a file in a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">path</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;content&quot;: null,
@@ -19548,7 +19697,15 @@ Note: For private repositories, these links are temporary and expire quickly.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">archive_format</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">path</span> (string)<br/> Valid Git reference, defaults to &#039;master&#039;.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">302</div></h5><div>Found.</div></li></ul></div></div><div id="d3fb3eaf9f856ab70d3c96a150437da8">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">archive_format</span> (string)<br/></div></li><li><div><span style="font-weight: bold;">path</span> (string)<br/> Valid Git reference, defaults to &#039;master&#039;.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-primary" style="font-size: 16px;">302</div></h5><div>Found.</div></li></ul></div></div><div id="d3fb3eaf9f856ab70d3c96a150437da8">
     URl: /repos/{ownerId}/{repoId}/downloads
     
     <div onclick="show_description('d3fb3eaf9f856ab70d3c96a150437da8')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -19820,7 +19977,7 @@ For part 2 see http://developer.github.com/v3/repos/downloads/#create-a-new-down
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">downloadId</span> (integer)<br/> Id of the download.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="586be817fa04452265b4ed852cc11195">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">downloadId</span> (integer)<br/> Id of the download.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="586be817fa04452265b4ed852cc11195">
     URl: /repos/{ownerId}/{repoId}/forks
     
     <div onclick="show_description('586be817fa04452265b4ed852cc11195')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -20413,7 +20570,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="1bb452c6582de3ea0d2c7a878ff100d6">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/> Id of a key.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="1bb452c6582de3ea0d2c7a878ff100d6">
     URl: /repos/{ownerId}/{repoId}/hooks
     
     <div onclick="show_description('1bb452c6582de3ea0d2c7a878ff100d6')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -20848,7 +21005,7 @@ minutes, be sure to contact Support.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="d8537eed2a858fa3a18d4f2b0835e627">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="d8537eed2a858fa3a18d4f2b0835e627">
     URl: /repos/{ownerId}/{repoId}/hooks/{hookId}/tests
     
     <div onclick="show_description('d8537eed2a858fa3a18d4f2b0835e627')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -20877,7 +21034,15 @@ Note: Previously /repos/:owner/:repo/hooks/:id/test
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Hook is triggered.</div></li></ul></div></div><div id="913199b40826d8186a67f24a586b88b8">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">hookId</span> (integer)<br/> Id of the hook.</div></li><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Hook is triggered.</div></li></ul></div></div><div id="913199b40826d8186a67f24a586b88b8">
     URl: /repos/{ownerId}/{repoId}/merges
     
     <div onclick="show_description('913199b40826d8186a67f24a586b88b8')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -20900,7 +21065,15 @@ Note: Previously /repos/:owner/:repo/hooks/:id/test
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div>Successful Response (The resulting merge commit)</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div>Successful Response (The resulting merge commit)</div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;sha&quot;: &quot;6dcb09b5b57875f334f61aebed695e2e4193db5e&quot;,
@@ -23868,7 +24041,15 @@ You can include a single email address or an array of addresses.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if you are following this user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if you are not following this user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/following/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if you are following this user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if you are not following this user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/following/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Follow a user.
 Following a user requires the user to be logged in and authenticated with
@@ -23877,7 +24058,15 @@ basic auth or OAuth with the user:follow scope.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>You are now following the user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/following/{userId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>You are now following the user.</div></li></ul></div><div class="panel" id="5347cbab7bb6af80aed0414e04dda726_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/following/{userId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Unfollow a user.
 Unfollowing a user requires the user to be logged in and authenticated with
@@ -23886,7 +24075,15 @@ basic auth or OAuth with the user:follow scope.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User unfollowed.</div></li></ul></div></div><div id="fce31a695fedb45cfa5d1675690933ca">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>User unfollowed.</div></li></ul></div></div><div id="fce31a695fedb45cfa5d1675690933ca">
     URl: /user/keys
     
     <div onclick="show_description('fce31a695fedb45cfa5d1675690933ca')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -24085,7 +24282,7 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li></ul></div></div><div id="5afc3c5f4ffe46bae510288c632042d9">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">keyId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Item removed.</div></li></ul></div></div><div id="5afc3c5f4ffe46bae510288c632042d9">
     URl: /user/starred
     
     <div onclick="show_description('5afc3c5f4ffe46bae510288c632042d9')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -24315,19 +24512,43 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>This repository is starred by you.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>This repository is not starred by you.</div></li></ul></div><div class="panel" id="fa9c3f4ece6cc4b9e779c0621108f552_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/starred/{ownerId}/{repoId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>This repository is starred by you.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>This repository is not starred by you.</div></li></ul></div><div class="panel" id="fa9c3f4ece6cc4b9e779c0621108f552_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/starred/{ownerId}/{repoId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Star a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository starred.</div></li></ul></div><div class="panel" id="fa9c3f4ece6cc4b9e779c0621108f552_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/starred/{ownerId}/{repoId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository starred.</div></li></ul></div><div class="panel" id="fa9c3f4ece6cc4b9e779c0621108f552_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/starred/{ownerId}/{repoId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Unstar a repository
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Unstarred.</div></li></ul></div></div><div id="193326441ce4d522c18d13dd6741afa1">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Unstarred.</div></li></ul></div></div><div id="193326441ce4d522c18d13dd6741afa1">
     URl: /user/subscriptions
     
     <div onclick="show_description('193326441ce4d522c18d13dd6741afa1')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -24561,19 +24782,43 @@ that you are authenticated through basic auth, or OAuth with the &#039;user&#039
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched by you.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Repository is not watched by you.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/subscriptions/{ownerId}/{repoId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched by you.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Repository is not watched by you.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /user/subscriptions/{ownerId}/{repoId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Watch a repository.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/subscriptions/{ownerId}/{repoId}
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Repository is watched.</div></li></ul></div><div class="panel" id="d8722acecca35ae46245ac60cc4da8ac_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /user/subscriptions/{ownerId}/{repoId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/>
                 Stop watching a repository
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Unwatched.</div></li></ul></div></div><div id="6c56ceaafcc976e9dbf644c9e8e65382">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">ownerId</span> (integer)<br/> Id of the owner.</div></li><li><div><span style="font-weight: bold;">repoId</span> (integer)<br/> Id of repository.</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Unwatched.</div></li></ul></div></div><div id="6c56ceaafcc976e9dbf644c9e8e65382">
     URl: /user/issues
     
     <div onclick="show_description('6c56ceaafcc976e9dbf644c9e8e65382')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -25469,7 +25714,15 @@ header to get the URL for the next page of users.
 
                 
                 
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">targetUserId</span> (integer)<br/></div></li><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if user follows target user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if user does not follow target user.</div></li></ul></div></div><div id="d02ad0567a6e5e48af92d4f1e330512d">
+                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Uri Parameters</h5><ul><li><div><span style="font-weight: bold;">targetUserId</span> (integer)<br/></div></li><li><div><span style="font-weight: bold;">userId</span> (integer)<br/></div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">204</div></h5><div>Response if user follows target user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-warning" style="font-size: 16px;">404</div></h5><div>Response if user does not follow target user.</div></li></ul></div></div><div id="d02ad0567a6e5e48af92d4f1e330512d">
     URl: /users/{userId}/keys
     
     <div onclick="show_description('d02ad0567a6e5e48af92d4f1e330512d')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -26062,7 +26315,15 @@ List all templates available to pass as an option when creating a repository.
     overflow: auto;
     background-color: #ccc;
     padding: 10px;"><div class="panel" id="34a8920b4ae16f49c1b5a4cbc80e3f83_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /markdown
-            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> text/html
+            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> text/html
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">&lt;p&gt;Hello world &lt;a href=&quot;http://github.com/github/linguist/issues/1&quot; class=&quot;issue-link&quot; title=&quot;This is a simple issue&quot;&gt;github/linguist#1&lt;/a&gt; &lt;strong&gt;cool&lt;/strong&gt;, and &lt;a href=&quot;http://github.com/github/gollum/issues/1&quot; class=&quot;issue-link&quot; title=&quot;This is another issue&quot;&gt;#1&lt;/a&gt;!&lt;/p&gt;</textarea></div></li></ul></div></div><div id="bb4acb52aa9daa148d583bcb30f512b3">
     URl: /markdown/raw
@@ -26082,7 +26343,15 @@ List all templates available to pass as an option when creating a repository.
     overflow: auto;
     background-color: #ccc;
     padding: 10px;"><div class="panel" id="bb4acb52aa9daa148d583bcb30f512b3_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /markdown/raw
-            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> text/html
+            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-GitHub-Media-Type</span>: You can check the current version of media type in responses.
+
+                </div></li><li><div><span style="font-weight: bold;">Accept</span>: Is used to set specified media type.
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Limit</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Remaining</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-RateLimit-Reset</span>: 
+                </div></li><li><div><span style="font-weight: bold;">X-GitHub-Request-Id</span>: 
+                </div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>API rate limit exceeded. See http://developer.github.com/v3/#rate-limiting
+for details.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> text/html
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">&lt;p&gt;Hello world github/linguist#1 &lt;strong&gt;cool&lt;/strong&gt;, and #1!&lt;/p&gt;</textarea></div></li></ul></div></div><div id="50d93e87529d463c27e983d40b0067a2">
     URl: /networks/{ownerId}/{repoId}/events
@@ -26250,9 +26519,7 @@ List all templates available to pass as an option when creating a repository.
             &quot;type&quot;: &quot;object&quot;
         }
     }
-}</textarea></div></li></ul></div></div></div></div></div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript">
+}</textarea></div></li></ul></div></div></div></div></div><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script type="text/javascript">
     function show_description(id) {
 
     window.location.hash = id+'_desc_GET';
@@ -26428,7 +26695,4 @@ a.parentNode&&a.parentNode.removeChild(a);else for(a=a.firstChild;a;a=a.nextSibl
     hide:function(){if(this.valueIsPlaceholder()&&this.input.hasClass("placeholder")&&(this.input.removeClass("placeholder"),this.input[0].value="",this.isPassword)){try{this.input[0].setAttribute("type","password")}catch(a){}this.input.show();this.input[0].focus()}},valueIsPlaceholder:function(){return this.input[0].value==this.input.attr("placeholder")},handlePassword:function(){var a=this.input;a.attr("realType","password");this.isPassword=!0;if(b.browser.msie&&a[0].outerHTML){var c=b(a[0].outerHTML.replace(/type=(['"])?password\1/gi,
         "type=$1text$1"));this.fakePassword=c.val(a.attr("placeholder")).addClass("placeholder").focus(function(){a.trigger("focus");b(this).hide()});b(a[0].form).submit(function(){c.remove();a.show()})}}};var e=!!("placeholder"in document.createElement("input"));b.fn.placeholder=function(){return e?this:this.each(function(){var a=b(this),c=new d(a);c.show(!0);a.focus(function(){c.hide()});a.blur(function(){c.show(!1)});b.browser.msie&&(b(window).load(function(){a.val()&&a.removeClass("placeholder");c.show(!0)}),
     a.focus(function(){if(this.value==""){var a=this.createTextRange();a.collapse(!0);a.moveStart("character",0);a.select()}}))})}})(jQuery);
-</script>
-
-</body>
-</html>
+</script></body></html>

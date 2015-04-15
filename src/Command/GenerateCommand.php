@@ -64,9 +64,9 @@ class GenerateCommand extends Command
             $text = '<info>api generate success for run copy text</info>'
                      .PHP_EOL.'file://'.realpath($outputFile).PHP_EOL;
         } catch (\Exception $e) {
-            $text = '<error>'.$e->getMessage().'</error>';
-            $text .= $e->getFile().' '.$e->getLine();
-            $text .= $e->getTraceAsString();
+            $text = '<error>'.$e->getMessage().'</error>'.PHP_EOL;
+            $text .= $e->getFile().' '.$e->getLine().PHP_EOL;
+            $text .= $e->getTraceAsString().PHP_EOL;
         }
 
         $output->writeln($text);

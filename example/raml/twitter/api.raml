@@ -11,7 +11,7 @@ baseUri: https://api.twitter.com/{version}/
 #     description: The sub-domain at which the API is accessible.
 #     enum: [ "api" ]
 securitySchemes:
-  oauth_1_0:
+  - oauth_1_0:
       description: |
         Twitter offers applications the ability to issue authenticated requests on
         behalf of the application itself (as opposed to on behalf of a specific user).
