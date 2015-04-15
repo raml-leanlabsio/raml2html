@@ -38,7 +38,14 @@ class Extension extends  Twig_Extension
     {
         if (is_object($in)) {
             $in = (string) $in;
+        }
+
+        if (is_string($in)) {
             $in = json_decode($in, true);
+        }
+
+        if (! is_array($in)) {
+            return $in;
         }
 
         $_escape = function ($str){
