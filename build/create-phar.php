@@ -7,4 +7,13 @@ $phar = new Phar($root . "raml2html.phar",
 
 $phar->buildFromDirectory($root,'/.php|.twig|.js|.css$/');
 
-$phar->setStub($phar->createDefaultStub("index.php"));
+$defaultStub = $phar->createDefaultStub("index.php");
+
+// Create a custom stub to add the shebang
+$stub = "#!/usr/bin/php \n".$defaultStub;
+
+// Add the stub
+$phar->setStub($stub);
+
+$phar->stopBuffering();
+

@@ -1,8 +1,8 @@
-## Install
+## raml2html php documentation generator
 
-### Install command
+### Installation
 
-> git clone git@gitlab.com:raml/raml2html.git && cd raml2html && composer update --no-dev
+> git clone git@github.com:raml-leanlabsio/raml2html.git && cd raml2html && composer update --no-dev
 
 ## Usage
 
@@ -12,6 +12,6 @@ input file and output file require
 
 ---
 
-api2html base in [raml parser](https://github.com/alecsammon/php-raml-parser)
+ - raml2html base in [raml parser](https://github.com/alecsammon/php-raml-parser)
 
-official [raml specification](http://raml.org/)
+ - official [raml specification](http://raml.org/)
