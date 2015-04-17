@@ -10,7 +10,13 @@
                     <div><span style="font-weight: bold;">{{ uriParameterName }}</span> ({{ uriParameter.type }}
                         )<br/> {{ uriParameter.description }}</div>
                     {% if uriParameter.example %}
-                        <pre><code>{{ uriParameter.example }}</code></pre>
+                        <div style="
+                                margin-top: 10px;
+                                margin-left: -15px;
+                                margin-right: -15px;
+                            "><h6>Example</h6>
+                        <pre class="prettyprint"><code>{{ uriParameter.example }}</code></pre>
+                        </div>
                     {% endif %}
                 </li>
             {% endfor %}
@@ -26,7 +32,13 @@
                     <div><span style="font-weight: bold;">{{ baseUriParameterName }}</span> ({{ baseUriParameter.type }}
                         )<br/> {{ baseUriParameter.description }}</div>
                     {% if baseUriParameter.example %}
-                        <pre><code>{{ baseUriParameter.example }}</code></pre>
+                        <div style="
+                                margin-top: 10px;
+                                margin-left: -15px;
+                                margin-right: -15px;
+                            "><h6>Example</h6>
+                           <pre class="prettyprint"><code>{{ baseUriParameter.example }}</code></pre>
+                        </div>
                     {% endif %}
                 </li>
             {% endfor %}
@@ -42,7 +54,13 @@
                     <div><span style="font-weight: bold;">{{ queryParameterName }}</span> ({{ queryParameter.type }}
                         )<br/> {{ queryParameter.description }}</div>
                     {% if queryParameter.example %}
-                        <pre><code>{{ queryParameter.example }}</code></pre>
+                         <div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6>
+                        <pre class="prettyprint"><code>{{ queryParameter.example }}</code></pre>
+                        </div>
                     {% endif %}
                 </li>
             {% endfor %}
@@ -59,7 +77,13 @@
                         <span style="font-weight: bold;">{{ header_name }}</span>: {{ header_value.description }}
                     </div>
                     {% if header_value.example %}
-                        <pre><code>{{ header_value.example }}</code></pre>
+                        <div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6>
+                           <pre class="prettyprint"><code>{{ header_value.example }}</code></pre>
+                        </div>
                     {% endif %}
                 </li>
             {% endfor %}

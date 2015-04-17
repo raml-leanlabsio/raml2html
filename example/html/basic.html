@@ -1,4 +1,4 @@
-<!doctype html><html data-ng-app="gitlabKBApp"><head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Muse: Mule Sales Enablement API</title><style type="text/css">
+<!doctype html><html data-ng-app="gitlabKBApp"><head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Muse: Mule Sales Enablement API</title><style type="text/css">
         style > body,
 h4,
 h5 {
@@ -279,9 +279,13 @@ li.L1,li.L3,li.L5,li.L7,li.L9
             right: 0; top: 0;
             overflow: auto;
             background-color: #ccc;
-            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>jwt</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>jwt</h2></div><div class="panel-body"><div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li></ul></div></div><div id="5aa9ae81f3346a6be7bbd62f7db12dda"><h4 onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')" style="cursor: pointer">oauth_2_0</h4><div>
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li></ul></div></div><div id="5aa9ae81f3346a6be7bbd62f7db12dda"><h4 onclick="show_description('5aa9ae81f3346a6be7bbd62f7db12dda')" style="cursor: pointer">oauth_2_0</h4><div>
                 Dropbox supports OAuth 2.0 for authenticating all API requests.
 
             </div></div><div id="5aa9ae81f3346a6be7bbd62f7db12dda_desc" class="desc_resources" style="
@@ -292,12 +296,13 @@ li.L1,li.L3,li.L5,li.L7,li.L9
             right: 0; top: 0;
             overflow: auto;
             background-color: #ccc;
-            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_2_0</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">access_token</span> (string)<br/> Used to send a valid OAuth 2 access token. Do not use together with
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_2_0</h2></div><div class="panel-body"><div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">access_token</span> (string
+                        )<br/> Used to send a valid OAuth 2 access token. Do not use together with
 the &quot;Authorization&quot; header
-</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use
+</div></li></ul><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">Authorization</span>: Used to send a valid OAuth 2 access token. Do not use
 with the &quot;access_token&quot; query string parameter.
 
-                </div></li></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
+                    </div></li></ul></div><ul class="list-group"></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
 revoked or expired an access token. To fix, you should re-
 authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
 timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li><li class="list-group-item"><strong>Authorization Uri</strong>: https://www.dropbox.com/1/oauth2/authorize
@@ -313,7 +318,7 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
             right: 0; top: 0;
             overflow: auto;
             background-color: #ccc;
-            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_1_0</h2></div><div class="panel-body"><div><h4 style="margin-bottom: 25px;">Request</h4></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
+            padding: 10px;"><div class="panel"><div class="panel-heading"><h2>oauth_1_0</h2></div><div class="panel-body"><div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"></ul></div></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token. This can happen if the user or Dropbox
 revoked or expired an access token. To fix, you should re-
 authenticate the user.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Bad OAuth request (wrong consumer key, bad nonce, expired
 timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Settings</h4></li><li class="list-group-item"><strong>Authorization Uri</strong>: https://www.dropbox.com/1/oauth/authorize
@@ -340,9 +345,14 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
                 This is get method
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">title</span> (string)<br/> Filter by title</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">title</span> (string
+                        )<br/> Filter by title</div></li></ul><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -397,9 +407,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentations.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="6e2d0c07c8fd718f60f9e6e4a13418e8_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /presentations
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -455,9 +503,13 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     background-color: #ccc;
     padding: 10px;"><div class="panel" id="669b943444452f3154cf564697e2937a_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;id&quot;: 1,
@@ -500,9 +552,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="669b943444452f3154cf564697e2937a_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -538,9 +628,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="669b943444452f3154cf564697e2937a_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -576,9 +704,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="669b943444452f3154cf564697e2937a_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div><div id="51679ce3738a69b94d40325e0e3d57db">
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div><div id="51679ce3738a69b94d40325e0e3d57db">
     URl: /products
     
     <div onclick="show_description('51679ce3738a69b94d40325e0e3d57db')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -601,8 +767,8 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
                 This is get method
 
                 
-                
-                                                                                <h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">region</span> (string)<br/> Filter by region</div></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">region</span> (string
+                        )<br/> Filter by region</div></li></ul></div><ul class="list-group"></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -657,9 +823,46 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
 }</textarea></div></li></ul></div><div class="panel" id="51679ce3738a69b94d40325e0e3d57db_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /products
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
                         </div><div class="alert alert-warning" onclick="show_description('d750fa1dbf8ce89aab2f10694247f2a9')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by oauth_1_0
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single Product&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;name&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;imageUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;region&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -716,7 +919,7 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     overflow: auto;
     background-color: #ccc;
     padding: 10px;"><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products/{productId}
-            </div><div class="panel-body"><strong>Description</strong><br/><br/><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+            </div><div class="panel-body"><strong>Description</strong><br/><br/></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4></div><ul class="list-group"></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;id&quot;: 1,
@@ -758,9 +961,46 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
 }</textarea></div></li></ul></div><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single Product&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;name&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;imageUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;region&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -795,9 +1035,46 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /products/{productId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single Product&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;name&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;imageUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;region&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -832,9 +1109,46 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="06efbcd37c38760e8f8755d4dd22d65f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /products/{productId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div><div id="12cc057a9576a25da6970cd08fc71470">
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single Product&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;name&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;imageUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;region&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/product.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div><div id="12cc057a9576a25da6970cd08fc71470">
     URl: /products/{productId}/presentations
     
     <div onclick="show_description('12cc057a9576a25da6970cd08fc71470')" style="position: relative; margin-top: 25px;"><div style="float: right;
@@ -857,9 +1171,14 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
                 This is get method
 
                                     <br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul><li><div><span style="font-weight: bold;">title</span> (string)<br/> Filter by title</div></li></ul><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Query parameters</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">title</span> (string
+                        )<br/> Filter by title</div></li></ul><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -914,9 +1233,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentations.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="12cc057a9576a25da6970cd08fc71470_desc_POST"><div class="panel-heading"><div class="label label-success">POST</div> /products/{productId}/presentations
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">201</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -972,9 +1329,13 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     background-color: #ccc;
     padding: 10px;"><div class="panel" id="d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_GET"><div class="panel-heading"><div class="label label-primary">GET</div> /products/{productId}/presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Example</h6><div style="margin-left: -15px;
                             margin-right: -15px;"><textarea class="code">{
   &quot;id&quot;: 1,
@@ -1017,9 +1378,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_PUT"><div class="panel-heading"><div class="label label-warning">PUT</div> /products/{productId}/presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -1055,9 +1454,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_PATCH"><div class="panel-heading"><div class="label label-info">PATCH</div> /products/{productId}/presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-success" style="font-size: 16px;">200</div></h5><div></div></li><li class="list-group-item"><strong>Content-Type:</strong> application/json
             </li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
                              margin-right: -15px;"><textarea class="code">{
     &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
@@ -1093,9 +1530,47 @@ timestamp...). Unfortunately, re-authenticating the user won&#039;t help here.</
     &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
 }</textarea></div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div><div class="panel" id="d97fa0af80e6538a5cf17a0dcc4d4b3f_desc_DELETE"><div class="panel-heading"><div class="label label-danger">DELETE</div> /products/{productId}/presentations/{presentationId}
             </div><div class="panel-body"><strong>Description</strong><br/><br/><br/><br/><div class="alert alert-warning" onclick="show_description('cfd61b8a7397fa7c10b2ae548f5bfaef')"  style="cursor: pointer"><i class="glyphicon glyphicon-lock"></i> Secured by jwt
-                        </div><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul><li><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
+                        </div></div><div class="panel-body"><h4 style="margin-bottom: 25px;">Request</h4><hr/><h5>Headers</h5><ul class="list-group"><li  class="list-group-item"><div><span style="font-weight: bold;">X-HD-Access-Token</span>: Valid jwt token
 
-                </div><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></li></ul></div><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div></div></div></div><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script type="text/javascript">
+                    </div><div style="
+                            margin-top: 10px;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                        "><h6>Example</h6><pre class="prettyprint"><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</code></pre></div></li></ul></div><ul class="list-group"><li class="list-group-item"><strong>Content-Type:</strong> application/json
+        </li><li class="list-group-item"><h5>Body</h5></li><li class="list-group-item"><h6>Schema</h6><div style="margin-left: -15px;
+                             margin-right: -15px;"><textarea class="code">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-03/schema&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;description&quot;: &quot;A single product Presentation&quot;,
+    &quot;properties&quot;: 
+    {
+        &quot;id&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;title&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;description&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;fileUrl&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        },
+        &quot;productId&quot;: 
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;required&quot;: true
+        }
+    },
+    &quot;id&quot;: &quot;file:///Users/cnam/Development/Nethouse/experimental/raml2html/example/raml/basic/schema/presentation.json&quot;
+}</textarea></div></li></ul><ul class="list-group"><li class="list-group-item"><h4>Response</h4></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">401</div></h5><div>Bad or expired token.</div></li><li class="list-group-item"><h5>Http Status code <div class="label label-danger" style="font-size: 16px;">403</div></h5><div>Access denied not valid privilage in resurces</div></li></ul></div></div></div></div></div><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script type="text/javascript">
     function show_description(id) {
 
     window.location.hash = id+'_desc_GET';
