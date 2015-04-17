@@ -59,16 +59,14 @@
                     {% endfor %}
                 {% endif %}
 
-                {#{% for mediaType, body in method.bodies %}
-
-                {% endfor %}#}
-
-                {% set headers = method.headers %}
-                {% set queryParameters = method.queryParameters %}
-                {% set uriParameters = resource.uriParameters %}
-                {% set baseUriParameters = method.baseUriParameters %}
-                {% include "request/collection.html.twig" %}
             </div>
+            {% set headers = method.headers %}
+            {% set queryParameters = method.queryParameters %}
+            {% set uriParameters = resource.uriParameters %}
+            {% set bodies = method.getBodies() %}
+            {% set baseUriParameters = method.baseUriParameters %}
+            {% include "request/collection.html.twig" %}
+
             {% set responses = method.responses %}
             {% include "response/collection.html.twig" %}
         </div>
