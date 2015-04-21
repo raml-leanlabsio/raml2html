@@ -5,7 +5,7 @@
 "PUT": "warning",
 "DELETE": "danger"
 } %}
-
+{% if resource.methods|length %}
 <div id="{{ resource.uri|md5 }}">
     URl: {{ resource.uri }}
     {{ resource.description }}
@@ -30,6 +30,7 @@
     </div>
     <hr/>
 </div>
+{% endif %}
 
 <div id="{{ resource.uri|md5 }}_desc" class="desc_resources" style="
     display: none;
