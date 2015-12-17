@@ -1,16 +1,11 @@
-{% macro menu_resources(resources) %}
-    {% import _self as macros %}
-    <nav id="nav" class="hidden-sm hidden-xs affix nav">
+<nav id="nav" class="hidden-sm hidden-xs affix nav">
+    {% if security %}
         <div>
             <a class="list-group-item collapsed" href="#security">Security</a>
         </div>
+    {% endif %}
 
-        {% for resource in resources %}
-            {% include "menu/group.html.twig" %}
-        {% endfor %}
-    </nav>
-{% endmacro %}
-
-{% import _self as macros %}
-
-{{ macros.menu_resources(resources) }}
+    {% for resource in resources %}
+        {% include "menu/group.html.twig" %}
+    {% endfor %}
+</nav>
