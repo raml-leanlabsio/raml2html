@@ -32,7 +32,11 @@
                 <h3>{{ documentation.title }}</h3>
                 <p>{{ documentation.content }}</p>
             {% endfor %}
-            {% include "security/collection.html.twig" %}
+
+            {% if security %}
+                {% include "security/collection.html.twig" %}
+            {% endif %}
+
             <hr/>
             {% include "resources/collection.html.twig" %}
         </div>
