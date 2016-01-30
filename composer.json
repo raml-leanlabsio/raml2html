@@ -14,9 +14,12 @@
       "Cnam\\": "src/"
     }
   },
+  "bin": [
+    "raml2html"
+  ],
   "require": {
-    "twig/twig": "1.18.0",
-    "symfony/console": "2.6.6",
+    "twig/twig": "~1.18",
+    "symfony/console": "~2.6",
     "cnam/php-raml-parser": "1.0.8"
   }
 }
