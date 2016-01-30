@@ -1,5 +1,7 @@
 # RAML to HTML converter with beautiful template.
 
+[![](https://badge.imagelayers.io/cnam/raml-doc-builder:latest.svg)](https://imagelayers.io/?images=cnam/raml-doc-builder:latest 'Get your own badge on imagelayers.io')
+
 ### Installation
 
 > git clone git@github.com:raml-leanlabsio/raml2html.git && cd raml2html && composer update --no-dev
@@ -11,8 +13,6 @@
 ```shell
 ./raml2html generate -i example/raml/basic/api.raml -o index.html
 ```
-
-[![](https://badge.imagelayers.io/cnam/raml-doc-builder:latest.svg)](https://imagelayers.io/?images=cnam/raml-doc-builder:latest 'Get your own badge on imagelayers.io')
 
 ### As docker image
 
