@@ -23,16 +23,11 @@
                 <div class="panel-heading">
                     <h2>{{ scheme.key }}</h2>
                 </div>
-                <div class="panel-body">
-                    <div>
-                        {% set describedBy = scheme.getDescribedBy() %}
+                {% set describedBy = scheme.getDescribedBy() %}
+                {% set headers = describedBy.headers %}
+                {% set queryParameters = describedBy.queryParameters %}
+                {% include "request/collection.html.twig" %}
 
-                        {% set headers = describedBy.headers %}
-                        {% set queryParameters = describedBy.queryParameters %}
-                        {% include "request/collection.html.twig" %}
-
-                    </div>
-                </div>
                 {% set responses =  describedBy.responses %}
                 {% include "response/collection.html.twig" %}
 

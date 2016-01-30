@@ -7,7 +7,7 @@ use Symfony\Component\Console\Application;
 $command = new \Cnam\Command\GenerateCommand();
 $watch = new \Cnam\Command\WatchCommand();
 
-$application = new Application('raml2html', '0.0.5');
+$application = new Application('raml2html', '0.0.6');
 
 $application->add($command);
 $application->add($watch);

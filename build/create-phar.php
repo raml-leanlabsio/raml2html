@@ -1,12 +1,12 @@
 <?php
 
 $root = __DIR__."/../";
+$output = $root."rel/";
 
-$phar = new Phar($root . "raml2html.phar",
+$phar = new Phar($output . "raml2html.phar",
     FilesystemIterator::CURRENT_AS_FILEINFO |       FilesystemIterator::KEY_AS_FILENAME, "raml2html.phar");
 
 $phar->buildFromDirectory($root,'/.php|.twig|.js|.css$/');
-
 $defaultStub = $phar->createDefaultStub("index.php");
 
 // Create a custom stub to add the shebang

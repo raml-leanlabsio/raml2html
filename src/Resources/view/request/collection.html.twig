@@ -1,95 +1,100 @@
-<div class="panel-body">
-
-    <h4 style="margin-bottom: 25px;">Request</h4>
-    {% if uriParameters %}
-        <hr/>
-        <h5>Uri Parameters</h5>
-        <ul class="list-group">
-            {% for uriParameterName, uriParameter in uriParameters %}
-                <li  class="list-group-item">
-                    <div><span style="font-weight: bold;">{{ uriParameterName }}</span> ({{ uriParameter.type }}
-                        )<br/> {{ uriParameter.description }}</div>
-                    {% if uriParameter.example %}
-                        <div style="
-                                margin-top: 10px;
-                                margin-left: -15px;
-                                margin-right: -15px;
-                            "><h6>Example</h6>
-                        <pre class="prettyprint"><code>{{ uriParameter.example }}</code></pre>
-                        </div>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-
-    {% if baseUriParameters %}
-        <hr/>
-        <h5>Base Uri Parameters</h5>
-        <ul class="list-group">
-            {% for baseUriParameterName, baseUriParameter in baseUriParameters %}
-                <li  class="list-group-item">
-                    <div><span style="font-weight: bold;">{{ baseUriParameterName }}</span> ({{ baseUriParameter.type }}
-                        )<br/> {{ baseUriParameter.description }}</div>
-                    {% if baseUriParameter.example %}
-                        <div style="
-                                margin-top: 10px;
-                                margin-left: -15px;
-                                margin-right: -15px;
-                            "><h6>Example</h6>
-                           <pre class="prettyprint"><code>{{ baseUriParameter.example }}</code></pre>
-                        </div>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-
-    {% if queryParameters %}
-        <hr/>
-        <h5>Query parameters</h5>
-        <ul class="list-group">
-            {% for queryParameterName, queryParameter in queryParameters %}
-                <li  class="list-group-item">
-                    <div><span style="font-weight: bold;">{{ queryParameterName }}</span> ({{ queryParameter.type }}
-                        )<br/> {{ queryParameter.description }}</div>
-                    {% if queryParameter.example %}
-                         <div style="
+<ul class="list-group">
+    <li class="list-group-item">
+        <h4>Request</h4>
+    </li>
+</ul>
+{% if uriParameters %}
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h5>Uri Parameters</h5>
+        </li>
+        {% for uriParameterName, uriParameter in uriParameters %}
+            <li  class="list-group-item">
+                <div><span style="font-weight: bold;">{{ uriParameterName }}</span> ({{ uriParameter.type }}
+                    )<br/> {{ uriParameter.description }}</div>
+                {% if uriParameter.example %}
+                    <div style="
                             margin-top: 10px;
                             margin-left: -15px;
                             margin-right: -15px;
                         "><h6>Example</h6>
-                        <pre class="prettyprint"><code>{{ queryParameter.example }}</code></pre>
-                        </div>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-
-    {% if headers %}
-        <hr/>
-        <h5>Headers</h5>
-        <ul class="list-group">
-            {% for header_name, header_value in headers %}
-                <li  class="list-group-item">
-                    <div>
-                        <span style="font-weight: bold;">{{ header_name }}</span>: {{ header_value.description }}
+                    <pre class="prettyprint"><code>{{ uriParameter.example }}</code></pre>
                     </div>
-                    {% if header_value.example %}
-                        <div style="
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if baseUriParameters %}
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h5>Base Uri Parameters</h5>
+        </li>
+        {% for baseUriParameterName, baseUriParameter in baseUriParameters %}
+            <li  class="list-group-item">
+                <div><span style="font-weight: bold;">{{ baseUriParameterName }}</span> ({{ baseUriParameter.type }}
+                    )<br/> {{ baseUriParameter.description }}</div>
+                {% if baseUriParameter.example %}
+                    <div style="
                             margin-top: 10px;
                             margin-left: -15px;
                             margin-right: -15px;
                         "><h6>Example</h6>
-                           <pre class="prettyprint"><code>{{ header_value.example }}</code></pre>
-                        </div>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-</div>
+                       <pre class="prettyprint"><code>{{ baseUriParameter.example }}</code></pre>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if queryParameters %}
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h5>Query parameters</h5>
+        </li>
+        {% for queryParameterName, queryParameter in queryParameters %}
+            <li  class="list-group-item">
+                <div><span style="font-weight: bold;">{{ queryParameterName }}</span> ({{ queryParameter.type }}
+                    )<br/> {{ queryParameter.description }}</div>
+                {% if queryParameter.example %}
+                     <div style="
+                        margin-top: 10px;
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    "><h6>Example</h6>
+                    <pre class="prettyprint"><code>{{ queryParameter.example }}</code></pre>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if headers %}
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h5>Headers</h5>
+        </li>
+        {% for header_name, header_value in headers %}
+            <li class="list-group-item">
+                <div>
+                    <span style="font-weight: bold;">{{ header_name }}</span>: {{ header_value.description }}
+                </div>
+                {% if header_value.example %}
+                    <div style="
+                        margin-top: 10px;
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    "><h6>Example</h6>
+                       <pre class="prettyprint"><code>{{ header_value.example }}</code></pre>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
 
 <ul class="list-group">
