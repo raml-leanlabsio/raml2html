@@ -1,14 +1,28 @@
 {
   "name": "cnam/raml2html",
-  "description": "php Raml to html documentation generator",
-  "tags": ["raml", "raml2html", "documentation generator"],
+  "description": "PHP RAML to HTML documentation generator",
+  "type": "library",
+  "tags": ["raml", "raml2html", "api", "documentation", "generator"],
   "minimum-stability": "stable",
+  "license": "MIT",
+  "homepage": "http://raml2html.leanlabs.io/",
   "authors": [
     {
       "name": "Anton Popov",
-      "email": "cnam812@gmail.com"
+      "email": "cnam812@gmail.com",
+      "role": "Project Founder & Developer"
+    },
+    {
+      "name": "Other contributors",
+      "homepage": "https://github.com/raml-leanlabsio/raml2html/graphs/contributors",
+      "role": "Contributors"
     }
   ],
+  "support": {
+    "source": "https://github.com/raml-leanlabsio/raml2html",
+    "issues": "https://github.com/raml-leanlabsio/raml2html/issues/",
+    "docs": "http://raml2html.leanlabs.io/documentation/"
+  },
   "autoload": {
     "psr-4": {
       "Cnam\\": "src/"
