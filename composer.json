@@ -32,8 +32,13 @@
     "raml2html"
   ],
   "require": {
+    "php": ">=5.4.0",
     "twig/twig": "~1.18",
     "symfony/console": "~2.6",
     "cnam/php-raml-parser": "1.0.8"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.5",
+    "phpunit/phpunit": "^4.8"
   }
 }
