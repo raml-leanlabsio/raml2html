@@ -4,7 +4,7 @@
 
 ### Installation
 
-> git clone git@github.com:raml-leanlabsio/raml2html.git && cd raml2html && composer update --no-dev
+> git clone git@github.com:raml-leanlabsio/raml2html.git && cd raml2html && composer install --no-dev
 
 ## Usage
 
