@@ -1,6 +1,9 @@
 # Change Log
 
 ## [Unreleased]
+### Bugfix
+- Update regular expression for json file not added to phar realise [issue #23](https://github.com/raml-leanlabsio/raml2html/issues/23) @cnam
+
 ### Changed
 - Improve composer file @ravage84
 - Improve .gitignore file @ravage84
