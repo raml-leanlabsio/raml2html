@@ -1,5 +1,5 @@
 {
-  "name": "cnam/raml2html",
+  "name": "raml-leanlabsio/raml2html",
   "description": "PHP RAML to HTML documentation generator",
   "type": "library",
   "tags": ["raml", "raml2html", "api", "documentation", "generator"],
